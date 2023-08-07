@@ -1,12 +1,20 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "no-shadow": "off",
-    "react/no-array-index-key": "off",
+    "no-shadow": "error",
+    "react/no-array-index-key": "error",
     "react/require-default-props": "off",
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
+    "no-unused-expressions": "error",
+    "no-unused-vars":"error",
+    "camelcase": "error",
+    "prefer-const": "error",
+    "comma-dangle": "error",
+    "semi": "error",
+    "max-params":"error",
+    "no-nested-ternary": "error",
     "react/jsx-filename-extension": [
       1,
       {
@@ -18,7 +26,7 @@
         ]
       }
     ],
-    "indent": "off",
+    "indent": "error",
     "react/jsx-indent": [
       "error",
       4
@@ -29,7 +37,7 @@
         "ignoreExternal": true
       }
     ],
-    "no-use-before-define": "off",
+    "no-use-before-define": "error",
     "react/jsx-indent-props": [
       "error",
       4
