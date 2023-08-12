@@ -44,6 +44,14 @@
     ],
     "react/prop-types": "off",
     "radix": 0,
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": true
+    }],
+    "object-curly-newline": "error",
+    "object-property-newline": ["error", {
+      "allowAllPropertiesOnSameLine": false
+    }],
     "max-len": [
       "error",
       {
@@ -53,7 +61,6 @@
         "ignoreRegExpLiterals": true
       }
     ],
-    "jsx-a11y/anchor-is-valid" : "off",
     "import/extensions": "off"
   }
 }
