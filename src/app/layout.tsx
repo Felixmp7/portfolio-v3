@@ -1,7 +1,9 @@
-import './globals.css';
+import { Footer } from '@/components/Footer';
+import { Navbar } from '@/components/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Navbar } from '@/components/Navbar';
+import './globals.css';
+import { AppThemeProvider } from './theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -46,8 +48,13 @@ export default function RootLayout({ children }: IProps) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <Navbar />
-                {children}
+                <AppThemeProvider>
+                    <main className='container container-bg'>
+                        <Navbar />
+                        {children}
+                        <Footer />
+                    </main>
+                </AppThemeProvider>
             </body>
         </html>
     );
