@@ -2,23 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply box-border text-gray-600 bg-gray-50 dark:bg-zinc-900 dark:text-gray-300;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+@layer components {
+  .container-bg {
+    @apply text-sm bg-white shadow-md dark:bg-zinc-800 dark:shadow-none dark:border-zinc-700;
+    @apply px-10 py-1;
+  }
+}
+
+@layer utilities {
+  .main-stack-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 0.5fr) repeat(3, 1fr) 0.2fr repeat(2, 1fr);
+    grid-template-rows: 1fr 5fr repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+  .div1 { grid-area: 1 / 6 / 3 / 8; }
+  .div2 { grid-area: 2 / 8 / 3 / 10; }
+  .div3 { grid-area: 3 / 6 / 10 / 10; }
+  .div4 { grid-area: 10 / 6 / 13 / 9; }
+  .div5 { grid-area: 7 / 3 / 12 / 6; }
+  .div6 { grid-area: 5 / 3 / 7 / 6; }
+  .div7 { grid-area: 2 / 1 / 5 / 6; }
 }
