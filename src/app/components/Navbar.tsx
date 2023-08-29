@@ -29,7 +29,7 @@ export const Navbar = () => {
                 <Link href="/" className={avatarTranslatedClasses}>
                     <Image
                         priority
-                        src="/profile.jpeg"
+                        src="/assets/me/profile.jpeg"
                         alt="Felix Pacheco Avatar"
                         className='rounded-full'
                         width={40}

@@ -8,7 +8,7 @@ export const MainHeader = () => (
         <div>
             <Image
                 priority
-                src="/profile.jpeg"
+                src="/assets/me/profile.jpeg"
                 alt="Felix Pacheco Avatar"
                 className="rounded-full"
                 width={80}
