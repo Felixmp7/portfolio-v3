@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { IoMoon, IoSunnyOutline } from 'react-icons/io5';
+import { BurguerMenu } from './BurguerMenu';
 import { NavbarItems } from './NavbarItems';
 
 export const Navbar = () => {
@@ -16,10 +17,10 @@ export const Navbar = () => {
     const isHomePath = pathname === '/';
     const navClasses = clsx({
         'flex items-center text-sm font-normal' : true,
-        'gap-5 justify-end' : isHomePath,
-        'justify-between' : !isHomePath
+        'gap-2 sm:gap-5 justify-end' : isHomePath,
+        'gap-2 justify-end sm:gap-0 sm:justify-between' : !isHomePath
     });
-    const avatarTranslatedClasses = clsx({'hidden': isHomePath});
+    const avatarTranslatedClasses = clsx({ 'hidden': isHomePath });
 
     const handleToggleTheme = () => isDarkTheme ? setTheme('light'): setTheme("dark");
 
@@ -36,9 +37,10 @@ export const Navbar = () => {
                         height={40}
                     />
                 </Link>
-                <ul className="flex gap-8 px-8 py-3 shadow-md dark:border-none border-[0.5px] dark:bg-zinc-700 rounded-3xl">
+                <ul className="hidden sm:flex gap-8 px-8 py-3 shadow-md dark:border-none border-[0.5px] dark:bg-zinc-700 rounded-3xl">
                     <NavbarItems />
                 </ul>
+                <BurguerMenu />
                 <button onClick={handleToggleTheme} className='px-4 py-3 text-2xl dark:text-inherit text-cyan-500 duration-150 ease-in rounded-full dark:bg-zinc-700 dark:hover:text-cyan-400 shadow-md dark:border-none border-[0.5px]'>
                     {isDarkTheme ? <IoMoon /> :<IoSunnyOutline />}
                 </button>
