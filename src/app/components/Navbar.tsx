@@ -33,8 +33,8 @@ export const Navbar = () => {
                         src="/assets/me/profile.jpeg"
                         alt="Felix Pacheco Avatar"
                         className='rounded-full'
-                        width={40}
-                        height={40}
+                        width={48}
+                        height={48}
                     />
                 </Link>
                 <ul className="hidden sm:flex gap-8 px-8 py-3 shadow-md dark:border-none border-[0.5px] dark:bg-zinc-700 rounded-3xl">
