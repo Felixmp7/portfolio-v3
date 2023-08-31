@@ -52,7 +52,7 @@ export default function RootLayout({ children }: IProps) {
                     <main className='container container-bg'>
                         <Navbar />
                         {children}
-                        <Footer />
+                        <Footer className="mt-10" />
                     </main>
                 </AppThemeProvider>
             </body>
