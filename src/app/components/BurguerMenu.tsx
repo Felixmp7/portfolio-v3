@@ -12,7 +12,7 @@ export const BurguerMenu = () => {
             </button>
 
             {isOpened && (
-                <div id="dropdown" className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-28 top-16 dark:bg-zinc-700">
+                <div id="dropdown" className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-md w-28 top-16 dark:bg-zinc-700">
                     <ul className="py-2 text-sm" aria-labelledby="dropdown-menu">
                         <li>
                             <Link className="block px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-600 dark:hover:text-white" href={NAVIGATION.about}>About</Link>
