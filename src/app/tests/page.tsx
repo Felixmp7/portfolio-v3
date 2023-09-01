@@ -1,7 +1,40 @@
+import { Test } from "@/components/tests/Test";
+import { TTestResume } from "src/types";
+
+const tests: TTestResume[] = [
+    {
+        id: 1,
+        name: 'Reign',
+        logo: '/assets/enterprises/reign.jpeg',
+        position: 'React Developer Ssr.',
+        date: '2022',
+        context: `The web application must request data to the Hackers News public API.
+        The dropdown selector component should use the URL parameter “query” from the “search by date” API in order to filter the posts.`,
+        deployLink: 'https://admirable-dasik-8f8f85.netlify.app/',
+        repositoryLink: 'https://github.com/Felixmp7/reign-test',
+        description : '',
+        wasHired: false
+    },
+    {
+        id: 2,
+        name: 'Matic',
+        logo: '/assets/enterprises/matic.svg',
+        position: 'React Developer Ssr.',
+        date: '2022',
+        context: `You need to complete some logic exercises with javascript or typescript and also you need to design a landing page where you will apply the skills required for a front-end developer position.`,
+        deployLink: 'https://matic-test.vercel.app/',
+        repositoryLink: 'https://github.com/Felixmp7/matic-test',
+        description : '',
+        wasHired: true
+    }
+];
+
 export default function Tests() {
     return (
-        <main>
-            Tests
-        </main>
+        <section className="grid gap-8 pt-10 md:grid-cols-2 place-items-start xl:pt-20">
+            {tests.map(({ id, ...rest}) => (
+                <Test key={id} id={id} {...rest} />
+            ))}
+        </section>
     );
 }
