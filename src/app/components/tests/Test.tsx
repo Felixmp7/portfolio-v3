@@ -7,9 +7,13 @@ import { TestResume } from './TestResume';
 
 export const Test = (props: TTestResume) => {
     const [isDescriptionOpened, setIsDescriptionOpened] = useState(false);
+
     return (
         <>
-            <button onClick={() => setIsDescriptionOpened(true)} className="relative p-5 border rounded-md shadow-md cursor-pointer dark:border-zinc-600">
+            <button
+                className="relative p-5 border rounded-md shadow-md cursor-pointer dark:border-zinc-600"
+                onClick={() => setIsDescriptionOpened(true)}
+            >
                 <TestResume {...props} wasHiredClassNames="dark:bg-zinc-800" hrClassNames='dark:border-zinc-600' />
             </button>
             {isDescriptionOpened && (
