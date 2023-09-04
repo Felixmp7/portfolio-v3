@@ -1,3 +1,5 @@
+import { HeadTitle } from "@/components/HeadTitle";
+import { MainSection } from "@/components/layout/MainSection";
 import { Test } from "@/components/tests/Test";
 import { TTestResume } from "src/types";
 
@@ -31,10 +33,17 @@ const tests: TTestResume[] = [
 
 export default function Tests() {
     return (
-        <section className="grid gap-8 pt-10 md:grid-cols-2 place-items-start xl:pt-20">
-            {tests.map(({ id, ...rest}) => (
-                <Test key={id} id={id} {...rest} />
-            ))}
-        </section>
+        <MainSection>
+            <HeadTitle
+                title="Frontend Tests"
+                description="This is a brief description of the frontend tests I developed as a React Developer to showcase my skills and qualify for frontend development positions."
+                classNames={{ title: 'mb-2' }}
+            />
+            <div className="grid gap-8 mt-10 md:grid-cols-2 place-items-start">
+                {tests.map(({ id, ...rest}) => (
+                    <Test key={id} id={id} {...rest} />
+                ))}
+            </div>
+        </MainSection>
     );
 }

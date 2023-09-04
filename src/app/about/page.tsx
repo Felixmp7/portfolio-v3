@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { CTA } from "@/components/CTA";
+import { HeadTitle } from "@/components/HeadTitle";
 import Image from "next/image";
 import { getAge } from "src/utils";
 
@@ -27,12 +28,17 @@ export default function About() {
                 />
             </section>
             <section>
-                <h1 className="text-3xl font-semibold text-right md:text-5xl">
-                    I&apos;m Felix. <br /> A System&apos;s Engineer <br /> from Caracas,
-                    <span className="text-yellow-500 dark:text-yellow-600"> Ven<span className="text-blue-500 dark:text-blue-600">ezu<span className="text-red-500 dark:text-red-600">ela</span></span></span>.
-                </h1>
+                <HeadTitle
+                    classNames={{ title: 'md:text-right' }}
+                    title={(
+                        <>
+                            I&apos;m Felix. <br /> A System&apos;s Engineer <br /> from Caracas,
+                            <span className="text-yellow-500 dark:text-yellow-600"> Ven<span className="text-blue-500 dark:text-blue-600">ezu<span className="text-red-500 dark:text-red-600">ela</span></span></span>.
+                        </>
+                    )}
+                />
                 <div className="xl:pl-5 dark:text-gray-400 text-[14.5px]">
-                    <p className="mt-5 xl:mt-10">
+                    <p className="mt-5">
                         {`
                             I am ${getAge()} years old and have been working as a React Developer since 2019. I would describe myself as honest, detail-oriented, responsible, and active in terms of work. I take pride in doing things well.
                         `}
