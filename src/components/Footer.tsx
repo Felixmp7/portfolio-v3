@@ -1,4 +1,4 @@
-import { NavbarItems } from '@/components/NavbarItems';
+import { NavbarItems } from '@/components/navigation/NavbarItems';
 import clsx from 'clsx';
 
 type TProps = {
