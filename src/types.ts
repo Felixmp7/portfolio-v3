@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export type TNavigationConfig = {
     home: string,
     about: string,
@@ -17,4 +18,10 @@ export type TTestResume = {
     deployLink: string,
     repositoryLink: string,
     wasHired: boolean
+}
+
+// eslint-disable-next-line no-shadow
+export enum EProjectStatus {
+    completed = 'completed',
+    poc = 'poc',
 }
