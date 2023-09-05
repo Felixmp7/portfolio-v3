@@ -26,14 +26,14 @@ export const Navbar = () => {
     const handleToggleTheme = () => isDarkTheme ? setTheme('light'): setTheme("dark");
 
     return (
-        <header className='pt-10'>
+        <header className='pt-5 sm:pt-10'>
             <nav className={navClasses}>
                 <Link href={NAVIGATION.home} className={avatarTranslatedClasses}>
                     <Image
                         priority
                         src="/assets/me/profile.jpeg"
                         alt="Felix Pacheco Avatar"
-                        className='rounded-full shadow-md'
+                        className='rounded-full shadow-md w-9 h-9 sm:w-auto sm:h-auto'
                         width={48}
                         height={48}
                     />
@@ -42,7 +42,7 @@ export const Navbar = () => {
                     <NavbarItems />
                 </ul>
                 <BurguerMenu />
-                <button onClick={handleToggleTheme} className='px-4 py-3 text-2xl dark:text-inherit text-yellow-500 bg-yellow-50 duration-150 ease-in rounded-full dark:bg-zinc-700 dark:hover:text-white shadow-md dark:border-none border-[0.5px] border-yellow-300'>
+                <button onClick={handleToggleTheme} className='p-2 sm:px-4 sm:py-3 text-xl sm:text-2xl dark:text-inherit text-yellow-500 bg-yellow-50 duration-150 ease-in rounded-full dark:bg-zinc-700 dark:hover:text-white shadow-md dark:border-none border-[0.5px] border-yellow-300'>
                     {isDarkTheme ? <IoMoon /> :<IoSunnyOutline />}
                 </button>
             </nav>
