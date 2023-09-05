@@ -1,6 +1,6 @@
 'use client';
 
-import { BurguerMenu } from '@/components/BurguerMenu';
+import { BurguerMenu } from '@/components/navigation/BurguerMenu';
 import { NavbarItems } from '@/components/navigation/NavbarItems';
 import clsx from 'clsx';
 import { useTheme } from "next-themes";
