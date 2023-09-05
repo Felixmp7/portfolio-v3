@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "enterpriseName": "ServicePad",
+        "logo": "/assets/enterprises/servicepad.svg",
+        "description": "Admin Portal Web Application that offers a way to manage contracts with companies, manufacturers and dealers in the world of construction of different unit structures.",
+        "status": "completed",
+        "link": "https://app.servicepad.com/auth/login",
+        "urlName": "app.servicepad",
+        "stack": ["React", "Typescript", "Next", "yup", "Axios", "React Hook Form", "Jira"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    },
+    {
+        "id": 2,
+        "enterpriseName": "Matic",
+        "logo": "/assets/enterprises/matic.svg",
+        "description": "Build and maintenance of an SDK Application to allow our clients to integrate our available payment methods in their websites.",
+        "status": "completed",
+        "urlName": "matic.io",
+        "link": "https://matic.io/product/",
+        "stack": ["React", "Typescript", "Vite", "Styled Components", "StoryBook", "React Testing Library", "yup", "Axios", "React Hook Form", "Jira"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    },
+    {
+        "id": 3,
+        "enterpriseName": "Matic",
+        "logo": "/assets/enterprises/matic.svg",
+        "description": "Build and maintenance of an Admin Portal Web Application that offers an easy way to manage your payments, associated customers and transactions.",
+        "status": "completed",
+        "link": "https://matic.io/product/",
+        "urlName": "matic.io",
+        "stack": ["React", "Typescript", "Vite", "Styled Components", "StoryBook", "React Testing Library", "yup", "Axios", "React Hook Form", "Jira"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    },
+    {
+        "id": 4,
+        "enterpriseName": "Brocsoft",
+        "logo": "/assets/enterprises/brocsoft.png",
+        "description": "We proposed a V2 following best development practices and replicating a mobile version of an application to exchange shirts of football teams.",
+        "status": "completed",
+        "link": "https://brocsoft.com/",
+        "urlName": "brocsoft.com",
+        "stack": ["React", "Typescript", "Next", "Tailwind CSS", "yup", "Axios", "React Hook Form"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    },
+    {
+        "id": 5,
+        "enterpriseName": "Brocsoft",
+        "logo": "/assets/enterprises/brocsoft.png",
+        "description": "I was part of Zeppelin Labs Team Engineers making different products and platforms for Latin America's finance and payments industries.",
+        "status": "completed",
+        "link": "https://zeppelinlabs.io/",
+        "urlName": "zeppelinlabs.io",
+        "stack": ["React", "Typescript", "CRA", "Styled Components", "Jest", "yup", "Axios", "Immer Forms", "Azure"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    },
+    {
+        "id": 6,
+        "enterpriseName": "Wadara",
+        "logo": "/assets/enterprises/wadara.png",
+        "description": "I participated on the discovery, development and proposals of solutions, products and platforms for one of the main Insurance Enterprises of Venezuela.",
+        "status": "poc",
+        "link": "https://www.linkedin.com/company/wadara/",
+        "urlName": "linkedin.com/company/wadara",
+        "stack": ["React", "Typescript", "Next", "Tailwind CSS", "React Native", "Expo", "yup", "Axios", "React Hook Form"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    },
+    {
+        "id": 7,
+        "enterpriseName": "ServiSenior",
+        "logo": "/assets/enterprises/servisenior.jpeg",
+        "description": "An impact entrepreneurship that collaborates with the labor inclusion of people over 50 years old, through a web platform that connects them with people and companies, through different services.",
+        "status": "completed",
+        "link": "https://home.servisenior.cl/",
+        "urlName": "servisenior.cl",
+        "stack": ["React", "Typescript", "Next", "Tailwind CSS", "StoryBook", "React Testing Library", "yup", "React Query", "React Hook Form", "Trello"],
+        "contributions": "I participated developing and refactoring this application following best development practices of React. I proposed replacing formik with react hook form to improve the performance of our application due to the re-render problem we experienced when using formik to handle and control form validations. Finally, I have worked on several new features since my arrival, such as the Matic Checkout feature."
+    }
+]
