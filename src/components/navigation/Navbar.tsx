@@ -1,7 +1,7 @@
 'use client';
 
 import { BurguerMenu } from '@/components/BurguerMenu';
-import { NavbarItems } from '@/components/NavbarItems';
+import { NavbarItems } from '@/components/navigation/NavbarItems';
 import clsx from 'clsx';
 import { useTheme } from "next-themes";
 import Image from 'next/image';
