@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { IoIosRocket, IoLogoGithub } from 'react-icons/io';
 import { TTestResume } from 'src/types';
-import { EnterpriseLogo } from '../EnterpriseLogo';
+import { EnterpriseLogo } from './EnterpriseLogo';
 
 type TProps = TTestResume & {
     wasHiredClassNames?: string

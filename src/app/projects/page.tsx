@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { HeadTitle } from "@/components/HeadTitle";
 import { MainSection } from "@/components/layout/MainSection";
-import { ProjectResume } from "@/components/projects/ProjectResume";
+import { ProjectResume } from "@/components/ProjectResume";
 import projectsJson from 'src/static/projects.json';
 import { EProjectStatus } from "src/types";
 

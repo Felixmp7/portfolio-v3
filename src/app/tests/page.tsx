@@ -1,6 +1,6 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { MainSection } from "@/components/layout/MainSection";
-import { TestResume } from "@/components/tests/TestResume";
+import { TestResume } from "@/components/TestResume";
 import { TTestResume } from "src/types";
 
 const tests: TTestResume[] = [
