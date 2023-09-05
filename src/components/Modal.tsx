@@ -1,7 +1,7 @@
 "use client";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { useClickOutside } from "src/hooks/useClickOutside";
 
 type TProps = PropsWithChildren & {
     onClickOutside: VoidFunction

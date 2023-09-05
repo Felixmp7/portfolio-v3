@@ -1,12 +1,12 @@
 'use client';
 
-import { AppThemeProvider } from '@/app/theme-provider';
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";
 import { NAVIGATION } from "src/constants";
+import { AppThemeProvider } from 'src/theme-provider';
 
 export const Layout = ({ children }:PropsWithChildren) => {
     const pathname = usePathname();

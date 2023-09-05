@@ -1,5 +1,5 @@
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { useRef, useState } from "react";
-import { useClickOutside } from "src/hooks/useClickOutside";
 
 export const useBurguerMenu = () => {
 

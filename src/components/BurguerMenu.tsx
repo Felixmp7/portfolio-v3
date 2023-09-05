@@ -1,7 +1,7 @@
+import { useBurguerMenu } from '@/hooks/useBurguerMenu';
 import Link from 'next/link';
 import { FaHamburger } from 'react-icons/fa';
 import { NAVIGATION } from 'src/constants';
-import { useBurguerMenu } from 'src/hooks/useBurguerMenu';
 
 export const BurguerMenu = () => {
     const { dropdownRef, isOpened, toggleMenu } = useBurguerMenu();
