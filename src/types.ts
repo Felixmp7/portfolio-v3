@@ -25,3 +25,14 @@ export enum EProjectStatus {
     completed = 'completed',
     poc = 'poc',
 }
+export type TProject = {
+    id: number
+    logo: string,
+    contributions: string,
+    stack: string[],
+    enterpriseName: string,
+    description: string,
+    status: EProjectStatus,
+    link: string,
+    urlName?: string,
+}
