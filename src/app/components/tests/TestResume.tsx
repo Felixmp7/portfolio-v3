@@ -1,10 +1,10 @@
 
 import clsx from 'clsx';
-import Image from 'next/image';
 import Link from 'next/link';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { IoIosRocket, IoLogoGithub } from 'react-icons/io';
 import { TTestResume } from 'src/types';
+import { EnterpriseLogo } from '../EnterpriseLogo';
 
 type TProps = TTestResume & {
     wasHiredClassNames?: string
@@ -34,14 +34,7 @@ export const TestResume = ({
     return (
         <>
             <div className="relative flex items-center gap-2">
-                <div className='inline-grid w-10 h-10 overflow-hidden border rounded-full shadow-md border-zinc-300 dark:border-zinc-700 place-content-center'>
-                    <Image
-                        src={logo}
-                        alt={`${name} logo `}
-                        width={25}
-                        height={25}
-                    />
-                </div>
+                <EnterpriseLogo url={logo} alt={name} />
                 <div className='text-left'>
                     {name}
                     <span className='block mt-1 text-xs'>{`${position} | ${date}`}</span>
