@@ -1,6 +1,6 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { MainSection } from "@/components/layout/MainSection";
-import { Test } from "@/components/tests/Test";
+import { TestResume } from "@/components/tests/TestResume";
 import { TTestResume } from "src/types";
 
 const tests: TTestResume[] = [
@@ -41,7 +41,9 @@ export default function Tests() {
             />
             <div className="grid gap-8 mt-10 md:grid-cols-2 place-items-start">
                 {tests.map(({ id, ...rest}) => (
-                    <Test key={id} id={id} {...rest} />
+                    <div key={id} className="relative p-5 border rounded-md shadow-md dark:border-zinc-600">
+                        <TestResume  id={id} {...rest} wasHiredClassNames="bg-zinc-800" />
+                    </div>
                 ))}
             </div>
         </MainSection>
