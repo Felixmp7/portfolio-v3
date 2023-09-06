@@ -1,7 +1,7 @@
 'use client';
 
 import { Footer } from '@/components/Footer';
-import { Navbar } from '@/components/Navbar';
+import { Navbar } from '@/components/navigation/Navbar';
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";
