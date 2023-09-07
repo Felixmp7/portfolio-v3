@@ -15,7 +15,7 @@ export const ProjectResume = ({
 
     return (
         <>
-            <div className='relative p-6 duration-200 ease-in-out border border-transparent rounded-lg md:pb-20 dark:hover:border-transparent hover:border-gray-300 dark:hover:bg-zinc-700'>
+            <div className='relative p-6 duration-200 ease-in-out rounded-lg md:pb-20 hover:bg-zinc-50 dark:hover:bg-zinc-700'>
                 <EnterpriseLogo url={logo} alt={enterpriseName} />
                 <h4 className="mt-2 text-base font-semibold">{enterpriseName}</h4>
                 <span
