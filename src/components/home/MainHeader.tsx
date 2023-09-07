@@ -1,8 +1,9 @@
+import { CTA } from '@/components/CTA';
+import { HeadTitle } from '@/components/HeadTitle';
 import { SocialMedia } from '@/components/SocialMedia';
 import { Laptop3D } from '@/components/home/3DLaptop';
 import Image from 'next/image';
 import { getAge } from 'src/utils';
-import { HeadTitle } from '../HeadTitle';
 
 
 export const MainHeader = () => (
@@ -30,8 +31,9 @@ export const MainHeader = () => (
                     title: "my-4 md:my-8"
                 }}
             />
-            <div className='mt-8'>
+            <div className='inline-flex items-center gap-3 mt-8'>
                 <SocialMedia />
+                <CTA />
             </div>
         </div>
         <Laptop3D />
