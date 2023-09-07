@@ -36,3 +36,12 @@ export type TProject = {
     link: string,
     urlName?: string,
 }
+
+export type TGender = "female" | "male"
+
+export type TReview = {
+    review: string[],
+    gender: TGender,
+    name: string,
+    charge: string
+}
