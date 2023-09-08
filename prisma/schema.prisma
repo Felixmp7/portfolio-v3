@@ -6,6 +6,38 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Review {
+  id          Int      @id @default(autoincrement())
+  name        String
+  gender      String
+  charge      String
+  review_text String[]
+}
+
+model Project {
+  id             Int      @id @default(autoincrement())
+  enterpriseName String
+  logo           String
+  description    String
+  status         String
+  link           String
+  urlName        String
+  stack          String[]
+  contributions  String
+}
+
+model Test {
+  id             Int     @id @default(autoincrement())
+  name           String
+  logo           String
+  position       String
+  date           String
+  context        String
+  deployLink     String
+  repositoryLink String
+  wasHired       Boolean
 }
