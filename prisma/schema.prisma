@@ -23,6 +23,7 @@ model Project {
   enterpriseName String
   logo           String
   description    String
+  period         String   @default("2000")
   status         String
   link           String
   urlName        String
