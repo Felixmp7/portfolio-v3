@@ -11,6 +11,6 @@ export const CTA = ({ className = ''}:TProps) => {
         [className]: !!className
     });
     return (
-        <Link href="/" className={classNames}>Hire</Link>
+        <Link href="mailto:devfex.19@gmail.com?subject=Hi, I checked your portfolio!&body=Hi, Felix!" className={classNames}>Hire</Link>
     );
 };
