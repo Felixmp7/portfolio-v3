@@ -30,18 +30,22 @@ export type TProject = {
     logo: string,
     contributions: string,
     stack: string[],
+    images: string[],
     enterpriseName: string,
     description: string,
+    period: string,
     status: EProjectStatus,
     link: string,
-    urlName?: string,
+    urlName: string,
 }
 
 export type TGender = "female" | "male"
 
 export type TReview = {
-    review: string[],
+    review_text: string[],
     gender: TGender,
     name: string,
     charge: string
 }
+
+export type Slug = 'servicepad' | 'matic' | 'brocsoft' | 'wadara' | 'servisenior' | 'reign'
