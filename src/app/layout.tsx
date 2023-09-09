@@ -36,8 +36,7 @@ export const metadata: Metadata = {
             sizes: '512x512',
             url: '/favicon/android-chrome-512x512.png'
         }
-    ],
-    manifest: '/public/favicon/site.webmanifest'
+    ]
 };
 
 interface IProps { children: React.ReactNode }
