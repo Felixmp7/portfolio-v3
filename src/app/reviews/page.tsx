@@ -1,10 +1,11 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { Review } from "@/components/Review";
 import { MainSection } from "@/components/layout/MainSection";
-import reviews from 'src/static/reviews.json';
+import { GET } from "src/app/api/reviews/route";
 import { TGender } from "src/types";
 
-export default function Reviews() {
+export default async function Reviews() {
+    const reviews = await GET();
     return (
         <MainSection>
             <HeadTitle
