@@ -1,17 +1,20 @@
 'use client';
 
+import BlurImage from "@/components/BlurImage";
 import { EnterpriseLogo } from "@/components/EnterpriseLogo";
 import Modal from "@/components/Modal";
 import Link from "next/link";
 import { useState } from "react";
 import { TbExternalLink, TbProgress } from 'react-icons/tb';
-import { EProjectStatus, TProject } from "src/types";
+import { EProjectStatus, Slug, TProject } from "src/types";
+import { getEnterpriseIcon } from "src/utils";
 
 export const ProjectResume = ({
-    enterpriseName, description, logo, status, link, urlName, contributions, stack
+    enterpriseName, description, status, link, urlName, contributions, stack, images
 }: TProject) => {
     const [isOpened, setIsOpened] = useState(false);
     const isPOC = status === EProjectStatus.poc;
+    const logo = getEnterpriseIcon(enterpriseName.toLowerCase() as Slug);
 
     return (
         <>
@@ -64,11 +67,20 @@ export const ProjectResume = ({
                             })}
                         </ul>
                     </div>
-                    <ul className="grid h-40 gap-4 xl:grid-cols-3">
-                        <li className="w-full h-full rounded-md bg-zinc-800" />
-                        <li className="w-full h-full rounded-md bg-zinc-800" />
-                        <li className="w-full h-full rounded-md bg-zinc-800" />
-                    </ul>
+                    {images.length === 3 && (
+                        <ul className="grid gap-4 overflow-y-scroll h-60 md:h-auto md:grid-cols-3">
+                            {images.map((url, index) => (
+                                <li key={url} className="relative w-full overflow-hidden rounded-md h-52 md:h-40">
+                                    <BlurImage
+                                        fill
+                                        quality={1}
+                                        src={url}
+                                        alt={`${enterpriseName}-screenshot-${index}`}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </Modal>
             )}
         </>
