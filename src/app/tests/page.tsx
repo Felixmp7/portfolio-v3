@@ -1,9 +1,10 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { TestResume } from "@/components/TestResume";
 import { MainSection } from "@/components/layout/MainSection";
-import testJson from 'src/static/tests.json';
+import { GET } from "src/app/api/challenges/route";
 
-export default function Tests() {
+export default async function Tests() {
+    const challenges = await GET();
     return (
         <MainSection>
             <HeadTitle
@@ -12,7 +13,7 @@ export default function Tests() {
                 classNames={{ title: 'mb-2' }}
             />
             <div className="grid gap-8 mt-10 md:grid-cols-2 place-items-start">
-                {testJson.map(({ id, ...rest}) => (
+                {challenges.map(({ id, ...rest}) => (
                     <div key={id} className="relative p-5 border rounded-md shadow-md dark:border-zinc-600">
                         <TestResume  id={id} {...rest} wasHiredClassNames="dark:bg-zinc-800" />
                     </div>
