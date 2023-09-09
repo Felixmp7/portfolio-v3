@@ -20,10 +20,11 @@ model Review {
 
 model Project {
   id             Int      @id @default(autoincrement())
+  period         String   @default("2000")
+  images         String[] @default(["https://earnionc.sirv.com/portfolio-felix/Projects/sp1.png", "https://earnionc.sirv.com/portfolio-felix/Projects/sp2.png", "https://earnionc.sirv.com/portfolio-felix/Projects/sp3.png"])
   enterpriseName String
   logo           String
   description    String
-  period         String   @default("2000")
   status         String
   link           String
   urlName        String
