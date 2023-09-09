@@ -1,11 +1,12 @@
 /* eslint-disable max-len */
 import { HeadTitle } from "@/components/HeadTitle";
-import { MainSection } from "@/components/layout/MainSection";
 import { ProjectResume } from "@/components/ProjectResume";
-import projectsJson from 'src/static/projects.json';
+import { MainSection } from "@/components/layout/MainSection";
+import { GET } from "src/app/api/projects/route";
 import { EProjectStatus } from "src/types";
 
-export default function Projects() {
+export default async function Projects() {
+    const projects = await GET();
     return (
         <MainSection>
             <HeadTitle
@@ -14,7 +15,7 @@ export default function Projects() {
                 classNames={{ title: 'mb-3' }}
             />
             <div className="grid gap-4 mt-10 md:grid-cols-2 xl:grid-cols-3">
-                {projectsJson.map((props) => (
+                {projects.map((props) => (
                     <ProjectResume {...props} key={props.id} status={props.status as EProjectStatus} />
                 ))}
             </div>
