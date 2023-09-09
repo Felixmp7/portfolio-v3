@@ -2,9 +2,12 @@ import { LatestWork } from '@/components/home/latest-work/LatestWork';
 import { MainHeader } from '@/components/home/MainHeader';
 import { MainRowImages } from '@/components/home/MainRowImages';
 import { MainStack } from '@/components/home/MainStack';
+import { GET } from 'src/app/api/projects/route';
 
+const PROJECT_IDS_TO_AVOID = [2, 5, 6];
 
-export default function Home() {
+export default async function Home() {
+    const projects = await GET(PROJECT_IDS_TO_AVOID);
     return (
         <section className="pt-12">
             <MainHeader />
@@ -16,7 +19,7 @@ export default function Home() {
                 <h2 className='text-3xl font-medium select-none md:text-5xl'>Main <strong className='font-extrabold hover:underline'>Stack</strong></h2>
                 <div className='mt-0 sm:mt-10 md:grid md:grid-cols-2 md:gap-16'>
                     <MainStack />
-                    <LatestWork />
+                    <LatestWork projects={projects} />
                 </div>
             </section>
         </section>
