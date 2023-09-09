@@ -1,36 +1,14 @@
 'use client';
 
-import { LatestWorkItem, TLatestWorkItem } from '@/components/home/latest-work/LatestWorkItem';
+
+import { LatestWorkItem } from '@/components/home/latest-work/LatestWorkItem';
 import { saveAs } from 'file-saver';
+
 import { HiDocumentDownload } from 'react-icons/hi';
 import { MdOutlineWorkOutline } from 'react-icons/md';
+import { TProject } from 'src/types';
 
-
-const LATEST_JOBS: TLatestWorkItem[] = [
-    {enterpriseName: 'Servicepad',
-        alt: 'Servicepad Logo',
-        job: 'React Developer Ssr.' ,
-        path: '/assets/enterprises/servicepad.svg',
-        range: '2023 - Current'},
-    {enterpriseName: 'Matic',
-        alt: 'Matic Logo',
-        job: 'React Developer Ssr.' ,
-        path: '/assets/enterprises/matic.svg',
-        range: '2022 - 2023'},
-    {enterpriseName: 'Brocsoft',
-        alt: 'Brocsoft Logo',
-        job: 'React Developer Ssr.' ,
-        path: '/assets/enterprises/brocsoft.png',
-        range: '2021 - 2022'},
-    {enterpriseName: 'Servisenior',
-        alt: 'Brocsoft Logo',
-        job: 'React Developer Jr.' ,
-        path: '/assets/enterprises/servisenior.jpeg',
-        range: '2020 - 2021'}
-];
-
-export const LatestWork = () => {
-
+export const LatestWork = ({ projects }: { projects: TProject[]}) => {
     const handleDownload = () => saveAs(
         '/assets/files/cv-felix-pacheco-react-developer.pdf',
         'cv-felix-pacheco-react-developer.pdf'
@@ -46,7 +24,7 @@ export const LatestWork = () => {
                 </span>
             </h3>
             <ul className='my-4'>
-                {LATEST_JOBS.map((job) => (
+                {projects.map((job) => (
                     <li key={job.enterpriseName}>
                         <LatestWorkItem {...job} />
                     </li>
