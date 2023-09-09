@@ -10,7 +10,7 @@ export default function About() {
             <section className="border-2 rounded-lg xl:relative dark:border-zinc-700">
                 <Image
                     priority
-                    src="/assets/me/me.jpeg"
+                    src="https://earnionc.sirv.com/portfolio-felix/me.jpeg"
                     className="mx-auto rounded-lg xl:relative xl:-left-4 xl:-top-4 xl:mx-0"
                     alt="Felix Pacheco Avatar"
                     draggable="false"
@@ -19,7 +19,7 @@ export default function About() {
                 />
                 <Image
                     priority
-                    src="/assets/mountain.jpeg"
+                    src="https://earnionc.sirv.com/portfolio-felix/mountain.jpeg"
                     className="hidden rounded-lg xl:inline-block xl:absolute xl:-bottom-4 xl:-right-4"
                     alt="Felix Pacheco Avatar"
                     draggable="false"
