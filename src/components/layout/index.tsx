@@ -14,12 +14,12 @@ export const Layout = ({ children }:PropsWithChildren) => {
 
     const mainClasses = clsx({
         'container container-bg': true,
-        'relative h-screen': isTestsPath
+        'relative lg:h-screen': isTestsPath
     });
 
     const footerClasses = clsx({
         'mt-10': !isTestsPath,
-        'absolute px-10 bottom-0 inset-x-0': isTestsPath
+        'mt-10 lg:mt-0 lg:absolute px-10 bottom-0 inset-x-0': isTestsPath
     });
     return (
         <AppThemeProvider>

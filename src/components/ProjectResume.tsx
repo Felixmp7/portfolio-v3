@@ -68,7 +68,7 @@ export const ProjectResume = ({
                         </ul>
                     </div>
                     {images.length === 3 && (
-                        <ul className="grid gap-4 overflow-y-scroll h-60 md:h-auto md:grid-cols-3">
+                        <ul className="grid gap-4 md:grid-cols-3">
                             {images.map((url, index) => (
                                 <li key={url} className="relative w-full overflow-hidden rounded-md h-52 md:h-40">
                                     <BlurImage
