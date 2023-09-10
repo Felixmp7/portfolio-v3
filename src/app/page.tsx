@@ -7,7 +7,9 @@ import { GET } from 'src/app/api/projects/route';
 const PROJECT_IDS_TO_AVOID = [2, 5, 6];
 
 export default async function Home() {
-    const projects = await GET(PROJECT_IDS_TO_AVOID);
+    const projects = await GET();
+    const latestProjects = projects.filter(({ id }) => !PROJECT_IDS_TO_AVOID.includes(id));
+
     return (
         <section className="pt-12">
             <MainHeader />
@@ -19,7 +21,7 @@ export default async function Home() {
                 <h2 className='text-3xl font-medium select-none md:text-5xl'>Main <strong className='font-extrabold hover:underline'>Stack</strong></h2>
                 <div className='mt-0 sm:mt-10 md:grid md:grid-cols-2 md:gap-16'>
                     <MainStack />
-                    <LatestWork projects={projects} />
+                    <LatestWork projects={latestProjects} />
                 </div>
             </section>
         </section>

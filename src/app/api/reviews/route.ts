@@ -8,7 +8,7 @@ export async function GET() {
                 id: 'asc'
             }
         });
-        return reviews as TReview[];
+        return (reviews || []) as TReview[];
     } catch (error) {
         return [];
     }

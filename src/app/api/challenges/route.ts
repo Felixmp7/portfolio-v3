@@ -8,7 +8,7 @@ export async function GET() {
                 id: 'asc'
             }
         });
-        return challenges as TTestResume[];
+        return (challenges || []) as TTestResume[];
     } catch (error) {
         return [];
     }
