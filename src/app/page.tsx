@@ -11,7 +11,7 @@ export default async function Home() {
     const latestProjects = projects.filter(({ id }) => !PROJECT_IDS_TO_AVOID.includes(id));
 
     return (
-        <section className="pt-12">
+        <section>
             <MainHeader />
             <section className='grid grid-cols-2 gap-4 mt-12 md:gap-10 md:mt-24 md:grid-cols-4 h-80 xl:scale-105 md:h-60 lg:h-80'>
                 <MainRowImages />

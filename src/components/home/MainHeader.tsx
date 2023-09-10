@@ -1,7 +1,6 @@
 import { CTA } from '@/components/CTA';
 import { HeadTitle } from '@/components/HeadTitle';
 import { SocialMedia } from '@/components/SocialMedia';
-import { Laptop3D } from '@/components/home/3DLaptop';
 import Image from 'next/image';
 import { getAge } from 'src/utils';
 
@@ -36,6 +35,5 @@ export const MainHeader = () => (
                 <CTA />
             </div>
         </div>
-        <Laptop3D />
     </header>
 );
