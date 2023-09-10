@@ -1,14 +1,22 @@
 import { useBurguerMenu } from '@/hooks/useBurguerMenu';
 import Link from 'next/link';
 import { FaHamburger } from 'react-icons/fa';
+import { LiaTimesSolid } from 'react-icons/lia';
 import { NAVIGATION } from 'src/constants';
 
 export const BurguerMenu = () => {
     const { dropdownRef, isOpened, toggleMenu } = useBurguerMenu();
     return (
         <div className='relative sm:hidden' ref={dropdownRef}>
-            <button id="dropdown-menu" aria-label="Burger Menú" data-dropdown-toggle="dropdown" type="button" className="p-2 text-xl dark:text-inherit duration-150 ease-in rounded-full dark:bg-zinc-700 shadow-md dark:border-none border-[0.5px]" onClick={toggleMenu}>
-                <FaHamburger />
+            <button
+                id="dropdown-menu"
+                aria-label="Burger Menú"
+                data-dropdown-toggle="dropdown"
+                type="button"
+                className="p-2 text-xl dark:text-inherit duration-150 ease-in rounded-full dark:bg-zinc-700 shadow-md dark:border-none border-[0.5px]"
+                onClick={toggleMenu}
+            >
+                {isOpened ? <LiaTimesSolid /> : <FaHamburger />}
             </button>
 
             {isOpened && (
