@@ -42,7 +42,11 @@ export const Navbar = () => {
                     <NavbarItems />
                 </ul>
                 <BurguerMenu />
-                <button onClick={handleToggleTheme} className='p-2 sm:px-4 sm:py-3 text-xl sm:text-2xl dark:text-inherit text-yellow-500 bg-yellow-50 duration-150 ease-in rounded-full dark:bg-zinc-700 dark:hover:text-white shadow-md dark:border-none border-[0.5px] border-yellow-300'>
+                <button
+                    aria-label="Toggle theme"
+                    className='p-2 sm:px-4 sm:py-3 text-xl sm:text-2xl dark:text-inherit text-yellow-500 bg-yellow-50 duration-150 ease-in rounded-full dark:bg-zinc-700 dark:hover:text-white shadow-md dark:border-none border-[0.5px] border-yellow-300'
+                    onClick={handleToggleTheme}
+                >
                     {isDarkTheme ? <IoMoon /> :<IoSunnyOutline />}
                 </button>
             </nav>
