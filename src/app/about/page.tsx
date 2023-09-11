@@ -60,10 +60,10 @@ export default function About() {
                         Today, I consider myself someone who always tries to do things as well as I can. I read a lot of articles on good practices and best patterns in the current year. I also understand why we need to take care or avoid certain patterns or structures that may seem harmless but significantly affect the performance of our applications. I am a big fan of Midudev&apos;s work and have tried his tips, seen his courses, and more.
                         <br />
                         <br />
-                        A curious fact could be: I didn&apos;t appreciate the AI advantages at the beginning but now I can say that I have learned how to take advantage about it and honestly I used it to improve the redaction of this text you are reading.
+                        A curious fact could be: I didn&apos;t appreciate the AI advantages at the beginning but now I can say that I have learned how to take advantage about it and actually I used it to improve the redaction of this text you are reading.
                         <br />
                         <br />
-                        I&apos;m an English Trainee and currently I have a B1/B2 level but since the IA arrived to help us... Why not start using it in our projects, right?.
+                        I&apos;m improving my English skills and currently I have a B1 level but since the IA arrived to help us... Why not start using it in our projects, right?.
                     </p>
                 </div>
                 <div className="text-right">

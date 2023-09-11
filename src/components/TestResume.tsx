@@ -48,7 +48,7 @@ export const TestResume = ({
                 </span>
             </div>
             <hr className={hrClasses} />
-            <p className='text-left'>Context: <i className='font-light'>{context}</i></p>
+            <p className='text-left'>Context: <span className='font-light dark:text-zinc-400'>{context}</span></p>
             {wasHired && (
                 <span className={wasHiredClasses}><HiBadgeCheck /></span>
             )}

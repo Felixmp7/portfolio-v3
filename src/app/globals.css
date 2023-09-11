@@ -11,7 +11,7 @@
 @layer components {
   .container-bg {
     @apply text-sm bg-white shadow-md dark:bg-zinc-800 dark:shadow-none dark:border-zinc-700;
-    @apply px-10 py-1;
+    @apply px-6 py-1 sm:px-10;
   }
 }
 
