@@ -48,4 +48,4 @@ export type TReview = {
     charge: string
 }
 
-export type Slug = 'servicepad' | 'matic' | 'brocsoft' | 'wadara' | 'servisenior' | 'reign'
+export type Slug = 'servicepad' | 'matic' | 'brocsoft' | 'wadara' | 'servisenior' | 'reign' | 'eagv'

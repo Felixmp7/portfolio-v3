@@ -21,7 +21,8 @@ export const getEnterpriseIcon = (slug: Slug) => {
         'brocsoft': '/assets/enterprises/brocsoft.png',
         'wadara': '/assets/enterprises/wadara.png',
         'servisenior': '/assets/enterprises/servisenior.jpeg',
-        'reign': '/assets/enterprises/reign.jpeg'
+        'reign': '/assets/enterprises/reign.jpeg',
+        'eagv': '/assets/enterprises/eagv.png'
     };
     return ICONS[slug];
 };
