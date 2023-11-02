@@ -4,11 +4,11 @@ import { MainRowImages } from '@/components/home/MainRowImages';
 import { MainStack } from '@/components/home/MainStack';
 import { GET } from 'src/app/api/projects/route';
 
-const PROJECT_IDS_TO_AVOID = [2, 5, 6];
+const PROJECT_IDS_TO_OMIT = [2, 5, 6, 8];
 
 export default async function Home() {
     const projects = await GET();
-    const latestProjects = projects.filter(({ id }) => !PROJECT_IDS_TO_AVOID.includes(id));
+    const latestProjects = projects.filter(({ id }) => !PROJECT_IDS_TO_OMIT.includes(id));
 
     return (
         <section>
