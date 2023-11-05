@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { IoIosRocket, IoLogoGithub } from 'react-icons/io';
-import { Slug, TTestResume } from 'src/types';
-import { getEnterpriseIcon } from 'src/utils';
+import { TTestResume } from 'src/types';
 import { EnterpriseLogo } from './EnterpriseLogo';
 
 type TProps = TTestResume & {
@@ -16,6 +15,7 @@ export const TestResume = ({
     context,
     date,
     name,
+    logo,
     position,
     deployLink,
     repositoryLink,
@@ -33,7 +33,7 @@ export const TestResume = ({
     return (
         <>
             <div className="relative flex items-center gap-2">
-                <EnterpriseLogo url={getEnterpriseIcon(name.toLowerCase() as Slug)} alt={name} />
+                <EnterpriseLogo url={logo} alt={name} />
                 <div className='text-left'>
                     {name}
                     <span className='block mt-1 text-xs'>{`${position} | ${date}`}</span>

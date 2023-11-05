@@ -47,5 +47,3 @@ export type TReview = {
     name: string,
     charge: string
 }
-
-export type Slug = 'servicepad' | 'matic' | 'brocsoft' | 'wadara' | 'servisenior' | 'reign' | 'eagv'

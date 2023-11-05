@@ -6,15 +6,13 @@ import Modal from "@/components/Modal";
 import Link from "next/link";
 import { useState } from "react";
 import { TbExternalLink, TbProgress } from 'react-icons/tb';
-import { EProjectStatus, Slug, TProject } from "src/types";
-import { getEnterpriseIcon } from "src/utils";
+import { EProjectStatus, TProject } from "src/types";
 
 export const ProjectResume = ({
-    enterpriseName, description, status, link, urlName, contributions, stack, images
+    enterpriseName, description, status, link, urlName, contributions, stack, images, logo
 }: TProject) => {
     const [isOpened, setIsOpened] = useState(false);
     const isPOC = status === EProjectStatus.poc;
-    const logo = getEnterpriseIcon(enterpriseName.toLowerCase() as Slug);
 
     return (
         <>
