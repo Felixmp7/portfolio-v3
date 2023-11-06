@@ -26,7 +26,7 @@ export const MainRowImages = () => {
                 <BlurImage
                     fill
                     quality={40}
-                    src="https://earnionc.sirv.com/portfolio-felix/long-field.jpeg"
+                    src="https://earnionc.sirv.com/portfolio-felix/soccer.jpeg?cy=400&ch=1320"
                     alt="Felix Pacheco Avatar"
                     className='object-cover rounded-3xl md:-rotate-2'
                 />
