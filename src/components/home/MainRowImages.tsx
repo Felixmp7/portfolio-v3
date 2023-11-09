@@ -1,6 +1,5 @@
 import BlurImage from '@/components/BlurImage';
 
-
 export const MainRowImages = () => {
     return (
         <>

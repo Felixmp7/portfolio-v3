@@ -1,4 +1,5 @@
 import { Layout } from '@/components/layout';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: IProps) {
         <html lang="en">
             <body className={inter.className}>
                 <Layout>{children}</Layout>
+                <Analytics />
             </body>
         </html>
     );
