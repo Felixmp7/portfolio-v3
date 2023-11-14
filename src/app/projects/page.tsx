@@ -2,11 +2,11 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { ProjectResume } from "@/components/ProjectResume";
 import { MainSection } from "@/components/layout/MainSection";
-import { GET } from "src/app/api/projects/route";
+import { getProjects } from "src/lib/services";
 import { EProjectStatus } from "src/types";
 
 export default async function Projects() {
-    const projects = await GET();
+    const projects = await getProjects();
     return (
         <MainSection>
             <HeadTitle

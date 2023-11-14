@@ -2,12 +2,12 @@ import { LatestWork } from '@/components/home/latest-work/LatestWork';
 import { MainHeader } from '@/components/home/MainHeader';
 import { MainRowImages } from '@/components/home/MainRowImages';
 import { MainStack } from '@/components/home/MainStack';
-import { GET } from 'src/app/api/projects/route';
+import { getProjects } from 'src/lib/services';
 
 const PROJECT_IDS_TO_OMIT = [2, 5, 6, 8];
 
 export default async function Home() {
-    const projects = await GET();
+    const projects = await getProjects();
     const latestProjects = projects.filter(({ id }) => !PROJECT_IDS_TO_OMIT.includes(id));
 
     return (

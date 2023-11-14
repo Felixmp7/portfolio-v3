@@ -1,10 +1,10 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { TestResume } from "@/components/TestResume";
 import { MainSection } from "@/components/layout/MainSection";
-import { GET } from "src/app/api/challenges/route";
+import { getChallenges } from "src/lib/services";
 
 export default async function Tests() {
-    const challenges = await GET();
+    const challenges = await getChallenges();
     return (
         <MainSection>
             <HeadTitle
