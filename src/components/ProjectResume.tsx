@@ -3,8 +3,10 @@
 import BlurImage from "@/components/BlurImage";
 import { EnterpriseLogo } from "@/components/EnterpriseLogo";
 import Modal from "@/components/Modal";
+import { useIsOnViewport } from "@/hooks/useIsOnViewport";
+import clsx from "clsx";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { TbExternalLink, TbProgress } from 'react-icons/tb';
 import { EProjectStatus, TProject } from "src/types";
 
@@ -12,11 +14,16 @@ export const ProjectResume = ({
     enterpriseName, description, status, link, urlName, contributions, stack, images, logo
 }: TProject) => {
     const [isOpened, setIsOpened] = useState(false);
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const { isOnViewport } = useIsOnViewport(containerRef);
     const isPOC = status === EProjectStatus.poc;
 
     return (
         <>
-            <div className='relative p-6 duration-200 ease-in-out rounded-lg md:pb-20 hover:bg-zinc-50 dark:hover:bg-zinc-700'>
+            <div ref={containerRef} className={clsx({
+                'relative p-6 duration-200 ease-in-out rounded-lg md:pb-20 hover:bg-zinc-50 dark:hover:bg-zinc-700': true,
+                "animate-fade-up animate-once animate-duration-[2000ms]": isOnViewport
+            })}>
                 <EnterpriseLogo url={logo} alt={enterpriseName} />
                 <h4 className="mt-2 text-base font-semibold">{enterpriseName}</h4>
                 <span

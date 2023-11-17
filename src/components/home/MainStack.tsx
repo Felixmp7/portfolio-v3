@@ -1,14 +1,26 @@
+'use client';
+
+import { useIsOnViewport } from '@/hooks/useIsOnViewport';
+import clsx from 'clsx';
 import Link from 'next/link';
+import { useRef } from 'react';
 import { BiLogoReact, BiLogoTailwindCss } from 'react-icons/bi';
 import { BsGit } from 'react-icons/bs';
 import { RiJavascriptFill } from 'react-icons/ri';
 import { SiNextdotjs, SiTestinglibrary } from 'react-icons/si';
 import { TbBrandTypescript } from 'react-icons/tb';
+import { DEFAULT_ANIMATION_CLASS } from 'src/constants';
 
 
 export const MainStack = () => {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const { isOnViewport } = useIsOnViewport(containerRef);
+
     return (
-        <div className="relative w-full mx-auto mb-10 text-4xl sm:w-2/3 main-stack-grid h-96 md:mb-0 md:w-auto md:mx-0">
+        <div ref={containerRef} className={clsx({
+            "relative w-full mx-auto mb-10 text-4xl sm:w-2/3 main-stack-grid h-96 md:mb-0 md:w-auto md:mx-0": true,
+            [DEFAULT_ANIMATION_CLASS]: isOnViewport
+        })}>
             <Link aria-label='Git docs' href='https://nextjs.org/' target='_blank' className="inline-grid p-2 text-white duration-500 ease-in-out bg-orange-500 rounded dark:bg-orange-700 hover:dark:bg-orange-400 div1 place-content-center hover:-translate-y-3">
                 <BsGit />
             </Link>
