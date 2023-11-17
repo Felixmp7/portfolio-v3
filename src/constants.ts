@@ -7,3 +7,5 @@ export const NAVIGATION: TNavigationConfig = {
     reviews: '/reviews' as const,
     tests: '/tests' as const
 };
+
+export const DEFAULT_ANIMATION_CLASS = "animate-fade animate-once animate-duration-[3000ms]";
