@@ -1,5 +1,5 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/babel","next/core-web-vitals"],
   "rules": {
     "no-shadow": "error",
     "react/no-array-index-key": "error",
