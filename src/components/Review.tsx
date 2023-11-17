@@ -3,7 +3,10 @@ import { SlUser, SlUserFemale } from 'react-icons/sl';
 import { TReview } from 'src/types';
 
 export const Review = ({ review_text: reviewText, name, charge, gender }: TReview) => {
+
+
     const Icon = gender === 'female' ? SlUserFemale : SlUser;
+
     return (
         <div className="overflow-hidden bg-white border rounded-md shadow-md dark:border-zinc-600 dark:bg-zinc-700">
             <div className="p-6 text-xs md:text-sm">

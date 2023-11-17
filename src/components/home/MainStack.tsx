@@ -8,7 +8,7 @@ import { TbBrandTypescript } from 'react-icons/tb';
 
 export const MainStack = () => {
     return (
-        <div className="relative w-full mx-auto mb-10 text-4xl sm:w-2/3 main-stack-grid h-96 md:mb-0 md:w-auto md:mx-0">
+        <div  className="relative w-full mx-auto mb-10 text-4xl sm:w-2/3 main-stack-grid h-96 md:mb-0 md:w-auto md:mx-0">
             <Link aria-label='Git docs' href='https://nextjs.org/' target='_blank' className="inline-grid p-2 text-white duration-500 ease-in-out bg-orange-500 rounded dark:bg-orange-700 hover:dark:bg-orange-400 div1 place-content-center hover:-translate-y-3">
                 <BsGit />
             </Link>

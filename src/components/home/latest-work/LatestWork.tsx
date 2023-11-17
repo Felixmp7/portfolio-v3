@@ -1,9 +1,7 @@
 'use client';
 
-
 import { LatestWorkItem } from '@/components/home/latest-work/LatestWorkItem';
 import { saveAs } from 'file-saver';
-
 import { HiDocumentDownload } from 'react-icons/hi';
 import { MdOutlineWorkOutline } from 'react-icons/md';
 import { TProject } from 'src/types';

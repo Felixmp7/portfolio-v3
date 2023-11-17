@@ -15,7 +15,7 @@ export default async function Reviews() {
             />
             <div className="grid gap-10 mt-10 lg:grid-cols-2 place-items-center">
                 {reviews.map((review) => (
-                    <Review {...review} key={review.name} gender={review.gender as TGender} />
+                    <Review {...review} key={review.id} gender={review.gender as TGender} />
                 ))}
             </div>
         </MainSection>

@@ -1,8 +1,13 @@
+'use client';
+
 import { CTA } from '@/components/CTA';
 import { HeadTitle } from '@/components/HeadTitle';
 import { SocialMedia } from '@/components/SocialMedia';
+import Spinner from "@/components/Spinner";
 import Image from 'next/image';
+import { lazy, Suspense } from 'react';
 import { getAge } from 'src/utils';
+const Spline = lazy(() => import('@splinetool/react-spline'));
 
 
 export const MainHeader = () => (
@@ -34,6 +39,15 @@ export const MainHeader = () => (
                 <SocialMedia />
                 <CTA />
             </div>
+        </div>
+        <div className='mt-10 overflow-hidden rounded-xl'>
+            <Suspense fallback={(
+                <div className="hidden xl:visible xl:grid xl:place-content-center">
+                    <Spinner />
+                </div>
+            )}>
+                <Spline scene="https://prod.spline.design/FFs-WdvYFpj7feEm/scene.splinecode"  />
+            </Suspense>
         </div>
     </header>
 );
