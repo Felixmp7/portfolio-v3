@@ -1,6 +1,7 @@
 import { CTA } from '@/components/CTA';
 import { HeadTitle } from '@/components/HeadTitle';
 import { SocialMedia } from '@/components/SocialMedia';
+import { Spline3D } from '@/components/home/Spline3D';
 import Image from 'next/image';
 import { getAge } from 'src/utils';
 
@@ -34,6 +35,9 @@ export const MainHeader = () => (
                 <SocialMedia />
                 <CTA />
             </div>
+        </div>
+        <div className='mt-10 overflow-hidden rounded-xl'>
+            <Spline3D />
         </div>
     </header>
 );
