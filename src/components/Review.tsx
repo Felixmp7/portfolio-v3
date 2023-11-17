@@ -12,6 +12,7 @@ export const Review = ({ review_text: reviewText, name, charge, gender }: TRevie
     const containerRef = useRef<HTMLDivElement | null>(null);
     const { isOnViewport } = useIsOnViewport(containerRef);
     const Icon = gender === 'female' ? SlUserFemale : SlUser;
+
     return (
         <div ref={containerRef} className={clsx({
             "overflow-hidden bg-white border rounded-md shadow-md dark:border-zinc-600 dark:bg-zinc-700": true,

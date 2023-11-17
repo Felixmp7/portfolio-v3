@@ -42,6 +42,7 @@ export type TProject = {
 export type TGender = "female" | "male"
 
 export type TReview = {
+    id: number,
     review_text: string[],
     gender: TGender,
     name: string,
