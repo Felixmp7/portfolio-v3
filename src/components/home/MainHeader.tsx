@@ -40,7 +40,7 @@ export const MainHeader = () => (
                 <CTA />
             </div>
         </div>
-        <div className='grid mt-10 overflow-hidden h-72 xl:h-auto rounded-xl place-content-center'>
+        <div className='mt-10 overflow-hidden rounded-xl'>
             <Suspense fallback={(<Spinner />)}>
                 <Spline scene="https://prod.spline.design/FFs-WdvYFpj7feEm/scene.splinecode"  />
             </Suspense>
