@@ -1,17 +1,12 @@
-'use client';
-
 import { CTA } from '@/components/CTA';
 import { HeadTitle } from '@/components/HeadTitle';
 import { SocialMedia } from '@/components/SocialMedia';
-import Spinner from "@/components/Spinner";
 import Image from 'next/image';
-import { lazy, Suspense } from 'react';
 import { getAge } from 'src/utils';
-const Spline = lazy(() => import('@splinetool/react-spline'));
 
 
 export const MainHeader = () => (
-    <header className='xl:grid xl:grid-cols-2'>
+    <header>
         <div>
             <Image
                 priority
@@ -39,11 +34,6 @@ export const MainHeader = () => (
                 <SocialMedia />
                 <CTA />
             </div>
-        </div>
-        <div className='mt-10 overflow-hidden h-[400px] xl:h-initial rounded-xl'>
-            <Suspense fallback={(<Spinner />)}>
-                <Spline scene="https://prod.spline.design/FFs-WdvYFpj7feEm/scene.splinecode"  />
-            </Suspense>
         </div>
     </header>
 );
