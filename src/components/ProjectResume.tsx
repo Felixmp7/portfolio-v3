@@ -8,15 +8,19 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { TbExternalLink, TbProgress } from 'react-icons/tb';
-import { EProjectStatus, TProject } from "src/types";
+import { ProjectStatus } from "src/models/enums";
+import { Project } from "src/models/types";
+import { splitString } from "src/utils";
 
 export const ProjectResume = ({
-    enterpriseName, description, status, link, urlName, contributions, stack, images, logo
-}: TProject) => {
+    enterpriseName, description, status, urlName, contributions, url, stack, images, logo
+}: Project) => {
     const [isOpened, setIsOpened] = useState(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
     const { isOnViewport } = useIsOnViewport(containerRef);
-    const isPOC = status === EProjectStatus.poc;
+    const stackArray = splitString(stack);
+    const imagesArray = splitString(images);
+    const isPOC = status === ProjectStatus.poc;
 
     return (
         <>
@@ -39,7 +43,7 @@ export const ProjectResume = ({
                         </span>
 
                     ) : (
-                        <Link href={link} target="_blank" className="inline-flex items-center gap-2 px-3 py-1 text-lg rounded-full dark:bg-zinc-800">
+                        <Link href={url} target="_blank" className="inline-flex items-center gap-2 px-3 py-1 text-lg rounded-full dark:bg-zinc-800">
                             <TbExternalLink /> <span className="text-xs">{urlName}</span>
                         </Link>
                     )}
@@ -62,7 +66,7 @@ export const ProjectResume = ({
                     <div className="my-4">
                         <h5 className="mb-1.5 font-semibold text-base">Stack</h5>
                         <ul className="flex flex-wrap items-center gap-2 font-light dark:text-zinc-400">
-                            {stack.map((item, index) => {
+                            {stackArray.map((item, index) => {
                                 return (
                                     <>
                                         <li key={item}>{item}</li>
@@ -72,14 +76,14 @@ export const ProjectResume = ({
                             })}
                         </ul>
                     </div>
-                    {images.length === 3 && (
+                    {imagesArray.length === 3 && (
                         <ul className="grid gap-4 md:grid-cols-3">
-                            {images.map((url, index) => (
-                                <li key={url} className="relative w-full overflow-hidden rounded-md h-52 md:h-40">
+                            {imagesArray.map((imageUrl, index) => (
+                                <li key={imageUrl} className="relative w-full overflow-hidden rounded-md h-52 md:h-40">
                                     <BlurImage
                                         fill
                                         quality={1}
-                                        src={url}
+                                        src={imageUrl}
                                         alt={`${enterpriseName}-screenshot-${index}`}
                                     />
                                 </li>

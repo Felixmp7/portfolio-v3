@@ -1,6 +1,6 @@
-import { TNavigationConfig } from "./types";
+import { NavigationConfig } from "./models/types";
 
-export const NAVIGATION: TNavigationConfig = {
+export const NAVIGATION: NavigationConfig = {
     home: '/' as const,
     about: '/about' as const,
     projects: '/projects' as const,

@@ -3,7 +3,7 @@ import { HeadTitle } from "@/components/HeadTitle";
 import { ProjectResume } from "@/components/ProjectResume";
 import { MainSection } from "@/components/layout/MainSection";
 import { getProjects } from "src/lib/services";
-import { EProjectStatus } from "src/types";
+import { ProjectStatus } from "src/models/enums";
 
 export default async function Projects() {
     const projects = await getProjects();
@@ -16,7 +16,7 @@ export default async function Projects() {
             />
             <div className="grid gap-4 mt-10 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((props) => (
-                    <ProjectResume {...props} key={props.id} status={props.status as EProjectStatus} />
+                    <ProjectResume {...props} key={props.id} status={props.status as ProjectStatus} />
                 ))}
             </div>
         </MainSection>

@@ -2,13 +2,10 @@ import { LatestWork } from '@/components/home/latest-work/LatestWork';
 import { MainHeader } from '@/components/home/MainHeader';
 import { MainRowImages } from '@/components/home/MainRowImages';
 import { MainStack } from '@/components/home/MainStack';
-import { getProjects } from 'src/lib/services';
-
-const PROJECT_IDS_TO_OMIT = [2, 5, 6, 8];
+import { getJobs } from 'src/lib/services';
 
 export default async function Home() {
-    const projects = await getProjects();
-    const latestProjects = projects.filter(({ id }) => !PROJECT_IDS_TO_OMIT.includes(id));
+    const jobs = await getJobs();
 
     return (
         <section>
@@ -21,7 +18,7 @@ export default async function Home() {
                 <h2 className='text-3xl font-medium select-none md:text-5xl'>Main <strong className='font-extrabold hover:underline'>Stack</strong></h2>
                 <div className='mt-0 sm:mt-10 md:grid md:grid-cols-2 md:gap-16'>
                     <MainStack />
-                    <LatestWork projects={latestProjects} />
+                    <LatestWork jobs={jobs} />
                 </div>
             </section>
         </section>

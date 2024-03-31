@@ -1,14 +1,14 @@
 import { prisma } from 'prisma/client';
-import { TProject, TReview, TTestResume } from 'src/types';
+import { Job, Project, Review, TestResume } from 'src/models/types';
 
 export async function getReviews() {
     try {
         const reviews = await prisma.review.findMany({
             orderBy: {
-                id: 'asc'
+                createdAt: 'desc'
             }
         });
-        return (reviews || []) as TReview[];
+        return (reviews || []) as Review[];
     } catch (error) {
         return [];
     }
@@ -18,10 +18,24 @@ export async function getProjects() {
     try {
         const projects = await prisma.project.findMany({
             orderBy: {
-                id: 'asc'
+                createdAt: 'desc'
             }
         });
-        return (projects || []) as TProject[];
+        return (projects || []) as Project[];
+    } catch (error) {
+        return [];
+    }
+}
+
+export async function getJobs() {
+    try {
+        const jobs = await prisma.job.findMany({
+            take: 5,
+            orderBy: {
+                createdAt: 'desc'
+            }
+        });
+        return (jobs || []) as Job[];
     } catch (error) {
         return [];
     }
@@ -35,7 +49,7 @@ export async function getChallenges() {
                 id: 'asc'
             }
         });
-        return (challenges || []) as TTestResume[];
+        return (challenges || []) as TestResume[];
     } catch (error) {
         return [];
     }

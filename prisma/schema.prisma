@@ -11,35 +11,47 @@ datasource db {
 }
 
 model Review {
-  id          Int      @id @default(autoincrement())
-  name        String
-  gender      String
-  charge      String
-  review_text String[]
+  id         Int      @id @unique @default(autoincrement())
+  createdAt  DateTime @default(now())
+  fullName   String
+  gender     String
+  charge     String
+  reviewText String
+}
+
+model Job {
+  id             Int      @id @unique @default(autoincrement())
+  createdAt      DateTime @default(now())
+  enterpriseName String
+  enterpriseLogo String
+  charge         String
+  period         String
 }
 
 model Project {
-  id             Int      @id @default(autoincrement())
+  id             Int      @id @unique @default(autoincrement())
+  createdAt      DateTime @default(now())
   period         String   @default("2000")
-  images         String[] @default(["https://earnionc.sirv.com/portfolio-felix/Projects/sp1.png", "https://earnionc.sirv.com/portfolio-felix/Projects/sp2.png", "https://earnionc.sirv.com/portfolio-felix/Projects/sp3.png"])
+  images         String   @default("https://earnionc.sirv.com/portfolio-felix/Projects/sp1.png, https://earnionc.sirv.com/portfolio-felix/Projects/sp2.png, https://earnionc.sirv.com/portfolio-felix/Projects/sp3.png")
   enterpriseName String
   logo           String
   description    String
   status         String
-  link           String
+  url            String
   urlName        String
-  stack          String[]
+  stack          String
   contributions  String
 }
 
 model Test {
-  id             Int     @id @default(autoincrement())
-  name           String
-  logo           String
+  id             Int      @id @unique @default(autoincrement())
+  createdAt      DateTime @default(now())
+  enterpriseName String
+  enterpriseLogo String
   position       String
   date           String
   context        String
   deployLink     String
   repositoryLink String
-  wasHired       Boolean
+  hired          Boolean
 }

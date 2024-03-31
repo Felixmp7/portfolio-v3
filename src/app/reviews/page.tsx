@@ -2,7 +2,7 @@ import { HeadTitle } from "@/components/HeadTitle";
 import { Review } from "@/components/Review";
 import { MainSection } from "@/components/layout/MainSection";
 import { getReviews } from "src/lib/services";
-import { TGender } from "src/types";
+import { Gender } from "src/models/types";
 
 export default async function Reviews() {
     const reviews = await getReviews();
@@ -15,7 +15,7 @@ export default async function Reviews() {
             />
             <div className="grid gap-10 mt-10 lg:grid-cols-2 place-items-center">
                 {reviews.map((review) => (
-                    <Review {...review} key={review.id} gender={review.gender as TGender} />
+                    <Review {...review} key={review.id} gender={review.gender as Gender} />
                 ))}
             </div>
         </MainSection>

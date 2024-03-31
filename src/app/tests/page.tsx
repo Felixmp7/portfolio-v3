@@ -15,7 +15,7 @@ export default async function Tests() {
             <div className="grid gap-8 mt-10 md:grid-cols-2 place-items-start">
                 {challenges.map(({ id, ...rest}) => (
                     <div key={id} className="relative p-5 border rounded-md shadow-md dark:border-zinc-600">
-                        <TestResume  id={id} {...rest} wasHiredClassNames="dark:bg-zinc-800" />
+                        <TestResume  id={id} {...rest} hiredClassName="dark:bg-zinc-800" />
                     </div>
                 ))}
             </div>
