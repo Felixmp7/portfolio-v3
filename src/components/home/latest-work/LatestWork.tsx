@@ -4,9 +4,9 @@ import { LatestWorkItem } from '@/components/home/latest-work/LatestWorkItem';
 import { saveAs } from 'file-saver';
 import { HiDocumentDownload } from 'react-icons/hi';
 import { MdOutlineWorkOutline } from 'react-icons/md';
-import { TProject } from 'src/types';
+import { Job } from 'src/models/types';
 
-export const LatestWork = ({ projects }: { projects: TProject[]}) => {
+export const LatestWork = ({ jobs }: { jobs: Job[]}) => {
     const handleDownload = () => saveAs(
         '/assets/files/cv-felix-pacheco-react-developer.pdf',
         'cv-felix-pacheco-react-developer.pdf'
@@ -22,7 +22,7 @@ export const LatestWork = ({ projects }: { projects: TProject[]}) => {
                 </span>
             </h3>
             <ul className='my-4'>
-                {projects.map((job) => (
+                {jobs.map((job) => (
                     <li key={job.enterpriseName}>
                         <LatestWorkItem {...job} />
                     </li>

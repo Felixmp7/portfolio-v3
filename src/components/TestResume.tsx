@@ -2,40 +2,34 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { HiBadgeCheck } from 'react-icons/hi';
 import { IoIosRocket, IoLogoGithub } from 'react-icons/io';
-import { TTestResume } from 'src/types';
+import { TestResume as TestResumeProps } from 'src/models/types';
 import { EnterpriseLogo } from './EnterpriseLogo';
 
-type TProps = TTestResume & {
-    wasHiredClassNames?: string
-    hrClassNames?: string
+type Props = TestResumeProps & {
+    hiredClassName?: string
 }
 
 export const TestResume = ({
-    wasHired,
+    hired,
     context,
     date,
-    name,
-    logo,
+    enterpriseName,
+    enterpriseLogo,
     position,
     deployLink,
     repositoryLink,
-    wasHiredClassNames = '',
-    hrClassNames = ''
-}: TProps) => {
+    hiredClassName = ''
+}: Props) => {
     const wasHiredClasses = clsx({
         'absolute text-3xl text-green-600 bg-white -right-2 -top-4': true,
-        [wasHiredClassNames]: !!wasHiredClassNames
-    });
-    const hrClasses = clsx({
-        'my-5': true,
-        [hrClassNames]: !!hrClassNames
+        [hiredClassName]: !!hiredClassName
     });
     return (
         <>
             <div className="relative flex items-center gap-2">
-                <EnterpriseLogo url={logo} alt={name} />
+                <EnterpriseLogo url={enterpriseLogo} alt={enterpriseName} />
                 <div className='text-left'>
-                    {name}
+                    {enterpriseName}
                     <span className='block mt-1 text-xs'>{`${position} | ${date}`}</span>
                 </div>
                 <span className='absolute right-0 flex items-center gap-2 text-xl -bottom-3'>
@@ -47,9 +41,9 @@ export const TestResume = ({
                     </Link>
                 </span>
             </div>
-            <hr className={hrClasses} />
+            <hr className="my-5" />
             <p className='text-left'>Context: <span className='font-light dark:text-zinc-400'>{context}</span></p>
-            {wasHired && (
+            {hired && (
                 <span className={wasHiredClasses}><HiBadgeCheck /></span>
             )}
         </>

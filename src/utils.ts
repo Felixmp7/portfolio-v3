@@ -1,4 +1,3 @@
-
 export const getAge = () => {
     const today = new Date();
     const birthDate = new Date(1996, 7, 30);
@@ -12,3 +11,5 @@ export const getAge = () => {
 
     return age;
 };
+
+export const splitString = (str: string) => str.split(',');
