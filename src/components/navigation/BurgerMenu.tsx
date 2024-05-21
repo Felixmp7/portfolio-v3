@@ -1,11 +1,11 @@
-import { useBurguerMenu } from '@/hooks/useBurguerMenu';
+import { useBurgerMenu } from '@/hooks/useBurgerMenu';
 import Link from 'next/link';
 import { FaHamburger } from 'react-icons/fa';
 import { LiaTimesSolid } from 'react-icons/lia';
 import { NAVIGATION } from 'src/constants';
 
-export const BurguerMenu = () => {
-    const { dropdownRef, isOpened, toggleMenu } = useBurguerMenu();
+export const BurgerMenu = () => {
+    const { dropdownRef, isOpened, toggleMenu } = useBurgerMenu();
     return (
         <div className='relative sm:hidden' ref={dropdownRef}>
             <button

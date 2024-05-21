@@ -1,6 +1,6 @@
 'use client';
 
-import { BurguerMenu } from '@/components/navigation/BurguerMenu';
+import { BurgerMenu } from '@/components/navigation/BurgerMenu';
 import { NavbarItems } from '@/components/navigation/NavbarItems';
 import clsx from 'clsx';
 import { useTheme } from "next-themes";
@@ -41,7 +41,7 @@ export const Navbar = () => {
                 <ul className="hidden sm:flex gap-8 px-8 py-3 shadow-md dark:border-none border-[0.5px] dark:bg-zinc-700 rounded-3xl">
                     <NavbarItems />
                 </ul>
-                <BurguerMenu />
+                <BurgerMenu />
                 <button
                     aria-label="Toggle theme"
                     className='p-2 sm:px-4 sm:py-3 text-xl sm:text-2xl dark:text-inherit text-yellow-500 bg-yellow-50 duration-150 ease-in rounded-full dark:bg-zinc-700 dark:hover:text-white shadow-md dark:border-none border-[0.5px] border-yellow-300'
