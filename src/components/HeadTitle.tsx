@@ -16,7 +16,7 @@ export const HeadTitle = ({ title, description, classNames }: TProps) => {
         [classNames?.title || '']: !!classNames?.title
     });
     const descriptionClasses = clsx({
-        'max-w-md leading-5 md:max-w-xl md:leading-7 dark:text-zinc-400': true,
+        'max-w-md leading-5 md:max-w-xl md:leading-7 dark:text-slate-400': true,
         [classNames?.description || '']: !!classNames?.description
     });
     return (
