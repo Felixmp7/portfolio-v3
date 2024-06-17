@@ -7,7 +7,7 @@ type TProps = {
 
 export const Footer = ({ className = ''}: TProps) => {
     const classNames = clsx({
-        'flex flex-col items-center space-y-4 dark:border-zinc-700 border-t-2 py-5 sm:space-y-0 sm:flex-row sm:justify-between': true,
+        'flex flex-col items-center space-y-4 dark:border-slate-700 border-t-2 py-5 sm:space-y-0 sm:flex-row sm:justify-between': true,
         [className]: !!className
     });
     return (
@@ -15,7 +15,7 @@ export const Footer = ({ className = ''}: TProps) => {
             <ul className="flex gap-8 py-3">
                 <NavbarItems />
             </ul>
-            <span className='text-xs text-zinc-500 md:text-sm'>Powered by Felix Pacheco | 2023</span>
+            <span className='text-xs text-slate-500 md:text-sm'>Powered by Felix Pacheco | 2023</span>
         </footer>
     );
 };

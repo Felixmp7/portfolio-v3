@@ -12,7 +12,7 @@ export const LatestWork = ({ jobs }: { jobs: Job[]}) => {
         'cv-felix-pacheco-react-developer.pdf'
     );
     return (
-        <div className='w-full h-full p-5 border rounded-md border-zinc-300 dark:border-zinc-700'>
+        <div className='w-full h-full p-5 border rounded-md border-slate-300 dark:border-slate-700'>
             <h3 className='flex items-center space-x-1'>
                 <span className='text-lg leading-none'>
                     <MdOutlineWorkOutline />
@@ -29,7 +29,7 @@ export const LatestWork = ({ jobs }: { jobs: Job[]}) => {
                 ))}
             </ul>
             <button
-                className='flex items-center justify-center w-full py-3 rounded-lg dark:opacity-80 dark:bg-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:hover:opacity-100'
+                className='flex items-center justify-center w-full py-3 rounded-lg dark:opacity-80 dark:bg-slate-700 bg-slate-100 hover:bg-slate-200 dark:hover:opacity-100'
                 onClick={handleDownload}
             >
                 Download CV <span className='ml-2 text-lg'>
