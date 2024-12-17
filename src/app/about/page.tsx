@@ -6,7 +6,7 @@ import { getAge } from "src/utils";
 
 export default function About() {
     return (
-        <div className="grid gap-10 pt-10 select-none xl:pt-24 xl:grid-cols-2">
+        <div className="grid gap-10 pt-10 xl:pt-24 xl:grid-cols-2">
             <section className="border-2 rounded-lg xl:relative dark:border-slate-700">
                 <Image
                     priority

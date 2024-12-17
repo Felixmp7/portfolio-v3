@@ -11,7 +11,7 @@ export default async function Projects() {
         <MainSection>
             <HeadTitle
                 title="Projects"
-                description="As a seasoned React developer with over 4 years of experience, I have developed a strong proficiency in building responsive and user-friendly web applications. My expertise lies in leveraging React's versatile features to create scalable and efficient front-end solutions that meet the needs of modern web development."
+                description="As a seasoned React developer with over 5 years of experience, I have developed a strong proficiency in building responsive and user-friendly web applications. My expertise lies in leveraging React's versatile features to create scalable and efficient front-end solutions that meet the needs of modern web development."
                 classNames={{ title: 'mb-3' }}
             />
             <div className="grid gap-4 mt-10 md:grid-cols-2 xl:grid-cols-3">
