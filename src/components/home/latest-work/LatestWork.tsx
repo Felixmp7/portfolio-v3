@@ -8,7 +8,7 @@ import { Job } from 'src/models/types';
 
 export const LatestWork = ({ jobs }: { jobs: Job[]}) => {
     const handleDownload = () => saveAs(
-        '/assets/files/cv-felix-pacheco-react-developer.pdf',
+        '/assets/files/CV-English-2025.pdf',
         'cv-felix-pacheco-react-developer.pdf'
     );
     return (
