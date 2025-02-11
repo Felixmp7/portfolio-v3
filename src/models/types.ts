@@ -37,7 +37,7 @@ export type Project = {
     logo: string,
     contributions: string,
     stack: string,
-    images: string,
+    images?: string,
     enterpriseName: string,
     description: string,
     period: string,
