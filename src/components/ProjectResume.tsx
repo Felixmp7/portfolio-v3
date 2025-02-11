@@ -17,7 +17,7 @@ export const ProjectResume = ({
 }: Project) => {
     const [isOpened, setIsOpened] = useState(false);
     const stackArray = splitString(stack);
-    const imagesArray = splitString(images);
+    const imagesArray = images?.length ? splitString(images): [];
     const isPOC = status === ProjectStatus.poc;
 
     return (
