@@ -1,7 +1,7 @@
+import type { Review as ReviewType } from '@prisma/client';
 import { FaQuoteLeft } from 'react-icons/fa';
-import { Review as ReviewProps } from 'src/models/types';
 
-export const Review = ({ reviewText, fullName, charge }: ReviewProps) => {
+export const Review = ({ reviewText, fullName, charge }: ReviewType) => {
     const reviewParagraphs = reviewText.split('.,');
 
     return (
