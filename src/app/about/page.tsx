@@ -44,7 +44,7 @@ export default function About() {
                         </>
                     }
                 />
-                <div className="xl:pl-5 dark:text-gray-400 text-[14.5px] pt-5 flex flex-col gap-5">
+                <div className="xl:pl-5 dark:text-slate-400 text-[14.5px] pt-5 flex flex-col gap-5">
                     <p>
                         {`I am ${getAge()} years old and have been working as a React Developer since 2019.`}
                     </p>
@@ -84,7 +84,7 @@ export default function About() {
                         I&apos;m also investing time on improving my English skills. I have
                         finished a course here in Venezuela and also I had the pleasure of
                         working with native speakers during all these time and currently I
-                        have a B2 level.
+                        have got a new certificate from EF SET with a C1 level.
                     </p>
                     <p>
                         So, that&apos;s me in a nutshell. I hope you enjoy my work and if
