@@ -5,7 +5,7 @@ export type NavigationConfig = {
     about: string,
     experience: string,
     projects: string,
-    reviews: string
+    // reviews: string
 }
 
 export type Gender = "female" | "male"

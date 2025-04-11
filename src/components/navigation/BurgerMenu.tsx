@@ -31,9 +31,9 @@ export const BurgerMenu = () => {
                         <li>
                             <Link className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-600 dark:hover:text-white" href={NAVIGATION.projects}>Projects</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-600 dark:hover:text-white" href={NAVIGATION.reviews}>Reviews</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             )}
