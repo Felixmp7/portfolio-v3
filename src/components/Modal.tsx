@@ -26,7 +26,7 @@ export default function Modal({ children, onClickOutside  }: TProps) {
         <div className="fixed inset-x-0 inset-y-0 z-10 grid text-sm bg-black backdrop-blur-sm bg-opacity-40 place-items-center">
             <div
                 ref={modalRef}
-                className="relative dark:bg-slate-700 bg-white dark:text-gray-300 text-slate-700 w-[80%] sm:w-2/3 md:w-2/3 rounded-md p-6 max-h-[400px] md:max-h-[initial] overflow-scroll md:overflow-hidden"
+                className="relative dark:bg-slate-700 bg-white dark:text-slate-300 text-slate-700 w-4/5 md:w-96 lg:w-1/3 rounded-md p-6 max-h-[400px] md:max-h-[initial] overflow-scroll md:overflow-hidden"
             >
                 {children}
                 <button className="absolute text-2xl md:text-xl text-slate-500 top-3 right-3" onClick={onClickOutside}><SlClose /></button>

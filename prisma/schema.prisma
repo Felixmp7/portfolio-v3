@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,45 +10,46 @@ datasource db {
 model Review {
   id         Int      @id @unique @default(autoincrement())
   createdAt  DateTime @default(now())
-  fullName   String
   gender     String
   charge     String
   reviewText String
+  fullName   String
 }
 
-model Job {
-  id             Int      @id @unique @default(autoincrement())
-  createdAt      DateTime @default(now())
-  enterpriseName String
-  enterpriseLogo String
-  charge         String
-  period         String
-}
-
-model Project {
+model Experience {
   id             Int      @id @unique @default(autoincrement())
   createdAt      DateTime @default(now())
   period         String   @default("2000")
-  images         String?   @default("[]")
   enterpriseName String
   logo           String
   description    String
-  status         String
   url            String
   urlName        String
-  stack          String
-  contributions  String
+  stack          String[]
+  contributions  String[]
+  role           String
+  location       String
 }
 
-model Test {
-  id             Int      @id @unique @default(autoincrement())
-  createdAt      DateTime @default(now())
-  enterpriseName String
-  enterpriseLogo String
-  position       String
-  date           String
-  context        String
-  deployLink     String
-  repositoryLink String
-  hired          Boolean
+model Project {
+  id             Int           @id @unique @default(autoincrement())
+  createdAt      DateTime      @default(now())
+  name           String
+  description    String
+  type           ProjectType   @default(frontEnd)
+  status         ProjectStatus @default(completed)
+  deployLink     String        @default("")
+  repositoryLink String        @default("")
+  images         String[]      @default([])
+  stack          String[]
+}
+
+enum ProjectType {
+  fullStack
+  frontEnd
+}
+
+enum ProjectStatus {
+  completed
+  inProgress
 }

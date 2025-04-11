@@ -1,24 +1,25 @@
-/* eslint-disable max-len */
 import { HeadTitle } from "@/components/HeadTitle";
 import { ProjectResume } from "@/components/ProjectResume";
 import { MainSection } from "@/components/layout/MainSection";
 import { getProjects } from "src/lib/services";
-import { ProjectStatus } from "src/models/enums";
 
-export default async function Projects() {
+export default async function ProjectsPage() {
     const projects = await getProjects();
     return (
         <MainSection>
             <HeadTitle
                 title="Projects"
-                description="As a seasoned React developer with over 5 years of experience, I have developed a strong proficiency in building responsive and user-friendly web applications. My expertise lies in leveraging React's versatile features to create scalable and efficient front-end solutions that meet the needs of modern web development."
-                classNames={{ title: 'mb-3' }}
+                // eslint-disable-next-line max-len
+                description="This section contains some personal projects and some others are frontend or fullstack tests for applying to some professional position. All of them are built using React, and some of them include other technologies like Next.js, TypeScript, and Tailwind CSS. The source code for all of them is available on my GitHub account."
+                classNames={{ title: 'mb-2' }}
             />
-            <div className="grid gap-4 mt-10 md:grid-cols-2 xl:grid-cols-3">
-                {projects.map((props) => (
-                    <ProjectResume {...props} key={props.id} status={props.status as ProjectStatus} />
+            <ul className="grid gap-8 mt-10 md:grid-cols-2">
+                {projects.map(({ id, ...rest}) => (
+                    <li key={id}>
+                        <ProjectResume id={id} {...rest} />
+                    </li>
                 ))}
-            </div>
+            </ul>
         </MainSection>
     );
 }

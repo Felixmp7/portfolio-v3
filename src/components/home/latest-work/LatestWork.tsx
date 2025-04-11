@@ -1,12 +1,12 @@
 'use client';
 
 import { LatestWorkItem } from '@/components/home/latest-work/LatestWorkItem';
+import { Experience } from '@prisma/client';
 import { saveAs } from 'file-saver';
 import { HiDocumentDownload } from 'react-icons/hi';
 import { MdOutlineWorkOutline } from 'react-icons/md';
-import { Job } from 'src/models/types';
 
-export const LatestWork = ({ jobs }: { jobs: Job[]}) => {
+export const LatestWork = ({ experiences }: { experiences: Experience[]}) => {
     const handleDownload = () => saveAs(
         '/assets/files/CV-Felix-EN-2025.pdf',
         'cv-felix-pacheco-react-developer.pdf'
@@ -22,9 +22,9 @@ export const LatestWork = ({ jobs }: { jobs: Job[]}) => {
                 </span>
             </h3>
             <ul className='my-4'>
-                {jobs.map((job) => (
-                    <li key={job.enterpriseName}>
-                        <LatestWorkItem {...job} />
+                {experiences.map((experience) => (
+                    <li key={experience.enterpriseName}>
+                        <LatestWorkItem {...experience} />
                     </li>
                 ))}
             </ul>
