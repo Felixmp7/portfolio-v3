@@ -14,7 +14,7 @@ export const NavbarItems = () => {
     return (
         <>
             {links.map(([key, link]) => (
-                <li key={key} data-active={isActive(link)} className="capitalize data-[active=true]:text-indigo-500 duration-150 ease-in hover:text-indigo-500"
+                <li key={key} data-active={isActive(link)} className="capitalize data-[active=true]:text-sky-500 duration-150 ease-in hover:text-sky-500"
                 >
                     <Link href={link}>{key}</Link>
                 </li>
