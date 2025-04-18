@@ -45,7 +45,14 @@ export const ExperienceSummary = ({
                     <hr className="mt-3 border-slate-500" />
                     <div className="my-4">
                         <h5 className="mb-1.5 font-semibold text-base">Contributions</h5>
-                        <p className="font-light dark:text-slate-400">{contributions}</p>
+                        {contributions.map((contribution, index) => {
+                            return (
+                                // eslint-disable-next-line react/no-array-index-key
+                                <p key={index} className="font-light dark:text-slate-400 mb-4">
+                                    {contribution}
+                                </p>
+                            );
+                        })}
                     </div>
                     <div className="my-4">
                         <h5 className="mb-1.5 font-semibold text-base">Stack</h5>
