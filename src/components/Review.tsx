@@ -5,7 +5,7 @@ export const Review = ({ reviewText, fullName, charge }: ReviewType) => {
     const reviewParagraphs = reviewText.split('.,');
 
     return (
-        <div className="overflow-hidden bg-white border rounded-md shadow-md dark:border-slate-600 dark:bg-slate-700">
+        <div className="overflow-hidden bg-white border rounded-md shadow-md dark:border-neutral-600 dark:bg-neutral-700">
             <div className="p-6 text-xs md:text-sm">
                 <span className='inline-block mb-6 text-3xl'><FaQuoteLeft /></span>
                 {reviewParagraphs.map((paragraph) => (

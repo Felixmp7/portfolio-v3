@@ -17,11 +17,11 @@ export const ProjectResume = ({
 }: Project) => {
     const StatusIcon = status === 'completed' ? <TbCheck /> : <TbProgress />;
     return (
-        <div className="relative p-5 border rounded-md shadow-md dark:border-slate-600">
+        <div className="relative p-5 border rounded-md shadow-md dark:border-neutral-600">
             <header className="relative flex items-center gap-2">
                 <div className='text-left'>
                     <h3 className="text-lg font-semibold">{name}</h3>
-                    <span className='inline-block px-3 py-1 mt-1 text-xs capitalize border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-100 dark:bg-slate-700'>{type}</span>
+                    <span className='inline-block px-3 py-1 mt-1 text-xs capitalize border rounded-lg border-neutral-200 dark:border-neutral-500 bg-neutral-100 dark:bg-neutral-700'>{type}</span>
                 </div>
                 <span className='absolute bottom-0 right-0 flex items-center gap-2 text-xl'>
                     <Link href={repositoryLink} className='dark:hover:text-white' target='_blank'>
@@ -34,9 +34,9 @@ export const ProjectResume = ({
                     )}
                 </span>
             </header>
-            <hr className="my-5 border-slate-200 dark:border-slate-500" />
-            <p className='text-left'>Description: <span className='font-light dark:text-slate-400'>{description}</span></p>
-            <p className='mt-2 mb-5 text-left'>Stack: <span className='font-light dark:text-slate-400'>{stack.join(', ')}</span></p>
+            <hr className="my-5 border-neutral-200 dark:border-neutral-500" />
+            <p className='text-left'>Description: <span className='font-light dark:text-neutral-400'>{description}</span></p>
+            <p className='mt-2 mb-5 text-left'>Stack: <span className='font-light dark:text-neutral-400'>{stack.join(', ')}</span></p>
             {images.length > 0 && (
                 <Image
                     src={images[0]}
@@ -46,7 +46,7 @@ export const ProjectResume = ({
                     width={460}
                     height={380}
                 />    )}
-            <span className="absolute inline-flex items-center gap-2 py-1 pl-3 text-lg rounded-full bottom-5 right-5 dark:bg-slate-800">
+            <span className="absolute inline-flex items-center gap-2 py-1 pl-3 text-lg rounded-full bottom-5 right-5 dark:bg-neutral-800">
                 {StatusIcon} <span className="text-xs">{status}</span>
             </span>
         </div>

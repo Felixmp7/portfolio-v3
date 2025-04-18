@@ -6,7 +6,7 @@ import { getAge } from "src/utils";
 export default function About() {
     return (
         <div className="grid gap-10 pt-10 xl:pt-24 xl:grid-cols-2">
-            <section className="border-2 rounded-lg xl:relative dark:border-slate-700">
+            <section className="border-2 rounded-lg xl:relative dark:border-neutral-700">
                 <Image
                     priority
                     src="https://earnionc.sirv.com/portfolio-felix/me.jpeg"
@@ -44,7 +44,7 @@ export default function About() {
                         </>
                     }
                 />
-                <div className="xl:pl-5 dark:text-slate-400 text-[14.5px] pt-5 flex flex-col gap-5">
+                <div className="xl:pl-5 dark:text-neutral-400 text-[14.5px] pt-5 flex flex-col gap-5">
                     <p>
                         {`I am ${getAge()} years old and have been working as a React Developer since 2019.`}
                     </p>

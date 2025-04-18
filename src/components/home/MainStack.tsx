@@ -27,7 +27,7 @@ export const MainStack = () => {
             <Link aria-label='Tailwind CSS docs' href='https://tailwindcss.com/' target='_blank' className="inline-flex items-center justify-end p-2 text-white duration-500 ease-in-out rounded hover:-translate-x-5 dark:bg-sky-700 hover:dark:bg-sky-400 div6 bg-sky-500">
                 <BiLogoTailwindCss />
             </Link>
-            <Link aria-label='Next docs' href='https://nextjs.org/docs' target='_blank' className="inline-grid p-2 text-white duration-500 ease-in-out bg-black rounded hover:dark:text-black hover:-translate-y-4 dark:bg-slate-700 hover:dark:bg-white div7 place-content-center text-7xl">
+            <Link aria-label='Next docs' href='https://nextjs.org/docs' target='_blank' className="inline-grid p-2 text-white duration-500 ease-in-out bg-black rounded hover:dark:text-black hover:-translate-y-4 dark:bg-neutral-700 hover:dark:bg-white div7 place-content-center text-7xl">
                 <SiNextdotjs />
             </Link>
         </div>

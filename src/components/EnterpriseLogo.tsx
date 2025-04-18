@@ -7,7 +7,7 @@ type TProps = {
 
 export const EnterpriseLogo = ({ url, alt }: TProps) => {
     return (
-        <div className='inline-grid overflow-hidden border rounded-full border-slate-300 dark:border-slate-600 w-9 h-9 place-content-center'>
+        <div className='inline-grid overflow-hidden border rounded-full border-neutral-300 dark:border-neutral-600 w-9 h-9 place-content-center'>
             <Image
                 width={20}
                 height={20}
