@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { NAVIGATION } from 'src/constants';
+import { getLinksArray } from '@/utils';
 
 export const NavbarItems = () => {
     const pathname = usePathname();
-    const links = Object.entries(NAVIGATION).filter(([key]) => key !== 'home');
+    const links = getLinksArray();
 
     const isActive = (href: string) => pathname.includes(href);
 
