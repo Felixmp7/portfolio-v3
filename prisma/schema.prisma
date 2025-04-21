@@ -7,10 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Gender {
+  male
+  female
+}
+
 model Review {
   id         Int      @id @unique @default(autoincrement())
   createdAt  DateTime @default(now())
-  gender     String
+  gender     Gender @default(male)
   charge     String
   reviewText String
   fullName   String
