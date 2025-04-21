@@ -3,11 +3,11 @@
 import { ThemeProvider } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-interface IProps {
+interface Props {
     children: React.ReactNode
 }
 
-export const AppThemeProvider = ({ children }: IProps) => {
+export const AppThemeProvider = ({ children }: Props) => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
 
-type TProps = {
+type Props = {
     title: ReactNode,
     description?: string,
     classNames?: {
@@ -10,7 +10,7 @@ type TProps = {
     }
 }
 
-export const HeadTitle = ({ title, description, classNames }: TProps) => {
+export const HeadTitle = ({ title, description, classNames }: Props) => {
     const titleClasses = clsx({
         'text-3xl font-semibold select-none md:text-5xl': true,
         [classNames?.title || '']: !!classNames?.title

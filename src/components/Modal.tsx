@@ -4,11 +4,11 @@ import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { SlClose } from 'react-icons/sl';
 
-type TProps = PropsWithChildren & {
+type Props = PropsWithChildren & {
     onClickOutside: VoidFunction
 }
 
-export default function Modal({ children, onClickOutside  }: TProps) {
+export default function Modal({ children, onClickOutside  }: Props) {
     const [mounted, setMounted] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
     const closeBtnRef = useRef<HTMLButtonElement>(null);

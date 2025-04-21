@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 
-type TProps = {
+type Props = {
     src: string,
     alt: string
     fill?: boolean,
@@ -11,7 +11,7 @@ type TProps = {
     className?: string
 }
 
-export default function BlurImage({ className = '', ...rest} : TProps) {
+export default function BlurImage({ className = '', ...rest} : Props) {
     const [isLoading, setLoading] = useState(true);
 
     const imageClasses = clsx({
