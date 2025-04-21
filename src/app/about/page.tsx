@@ -11,7 +11,7 @@ export default function About() {
                     priority
                     src="https://earnionc.sirv.com/portfolio-felix/felix-casual.webp"
                     className="mx-auto rotate-90 rounded-lg xl:relative xl:-left-4 xl:-top-4 xl:mx-0"
-                    alt="Felix Pacheco Avatar"
+                    alt="Felix Pacheco Casual"
                     draggable="false"
                     width={350}
                     height={800}
@@ -20,7 +20,7 @@ export default function About() {
                     priority
                     src="https://earnionc.sirv.com/portfolio-felix/felix-sport.webp"
                     className="hidden rounded-lg xl:inline-block xl:absolute xl:-bottom-4 xl:-right-4"
-                    alt="Felix Pacheco Avatar"
+                    alt="Felix Pacheco Sport"
                     draggable="false"
                     width={460}
                     height={460}
