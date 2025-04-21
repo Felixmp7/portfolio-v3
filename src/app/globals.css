@@ -17,29 +17,58 @@
 
 @layer utilities {
   body {
-      -ms-overflow-style: none;
-      /* for Internet Explorer, Edge */
-      scrollbar-width: none;
-      /* for Firefox */
-      overflow-y: scroll;
-    }
-    body::-webkit-scrollbar {
-      display: none;
-      /* for Chrome, Safari, and Opera */
-    }
+    -ms-overflow-style: none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    /* for Firefox */
+    overflow-y: scroll;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #0ea5e9;
+    /* sky-500 */
+    outline-offset: 2px;
+  }
+
   .main-stack-grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, 0.5fr) repeat(3, 1fr) 0.2fr repeat(2, 1fr);
     grid-template-rows: 1fr 5fr repeat(10, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-}
+  }
 
-  .div1 { grid-area: 1 / 6 / 3 / 8; }
-  .div2 { grid-area: 2 / 8 / 3 / 10; }
-  .div3 { grid-area: 3 / 6 / 10 / 10; }
-  .div4 { grid-area: 10 / 6 / 13 / 9; }
-  .div5 { grid-area: 7 / 3 / 12 / 6; }
-  .div6 { grid-area: 5 / 3 / 7 / 6; }
-  .div7 { grid-area: 2 / 1 / 5 / 6; }
+  .div1 {
+    grid-area: 1 / 6 / 3 / 8;
+  }
+
+  .div2 {
+    grid-area: 2 / 8 / 3 / 10;
+  }
+
+  .div3 {
+    grid-area: 3 / 6 / 10 / 10;
+  }
+
+  .div4 {
+    grid-area: 10 / 6 / 13 / 9;
+  }
+
+  .div5 {
+    grid-area: 7 / 3 / 12 / 6;
+  }
+
+  .div6 {
+    grid-area: 5 / 3 / 7 / 6;
+  }
+
+  .div7 {
+    grid-area: 2 / 1 / 5 / 6;
+  }
 }

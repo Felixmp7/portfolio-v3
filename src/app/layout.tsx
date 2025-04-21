@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     ]
 };
 
-interface IProps { children: React.ReactNode }
+interface Props { children: React.ReactNode }
 
-export default function RootLayout({ children }: IProps) {
+export default function RootLayout({ children }: Props) {
     return (
         <html lang="en">
             <body className={inter.className}>

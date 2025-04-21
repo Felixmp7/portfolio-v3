@@ -7,8 +7,8 @@ export const MainRowImages = () => {
                 <BlurImage
                     fill
                     quality={40}
-                    src="https://earnionc.sirv.com/portfolio-felix/react.jpeg"
-                    alt="Felix Pacheco Avatar"
+                    src="https://earnionc.sirv.com/portfolio-felix/react.webp"
+                    alt="React Js image"
                     className='object-cover rounded-3xl md:rotate-6'
                 />
             </div>
@@ -16,8 +16,8 @@ export const MainRowImages = () => {
                 <BlurImage
                     fill
                     quality={40}
-                    src="https://earnionc.sirv.com/portfolio-felix/mountain.jpeg"
-                    alt="Felix Pacheco Avatar"
+                    src="https://earnionc.sirv.com/portfolio-felix/felix-sport.webp"
+                    alt="Felix Pacheco image"
                     className='object-cover md:-translate-y-6 rounded-3xl md:rotate-1'
                 />
             </div>
@@ -25,8 +25,8 @@ export const MainRowImages = () => {
                 <BlurImage
                     fill
                     quality={40}
-                    src="https://earnionc.sirv.com/portfolio-felix/soccer.jpeg?cy=400&ch=1320"
-                    alt="Felix Pacheco Avatar"
+                    src="https://earnionc.sirv.com/portfolio-felix/soccer.webp"
+                    alt="Felix Pacheco image"
                     className='object-cover rounded-3xl md:-rotate-2'
                 />
             </div>
@@ -34,8 +34,8 @@ export const MainRowImages = () => {
                 <BlurImage
                     fill
                     quality={40}
-                    src="https://earnionc.sirv.com/portfolio-felix/team.jpeg"
-                    alt="Felix Pacheco Avatar"
+                    src="https://earnionc.sirv.com/portfolio-felix/team.webp"
+                    alt="Felix Pacheco Jr."
                     className='object-cover md:translate-y-4 rounded-3xl md:rotate-3'
                 />
             </div>

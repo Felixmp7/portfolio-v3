@@ -1,3 +1,5 @@
+import { NAVIGATION } from "./constants";
+
 export const getAge = () => {
     const today = new Date();
     const birthDate = new Date(1996, 7, 30);
@@ -13,3 +15,5 @@ export const getAge = () => {
 };
 
 export const splitString = (str: string) => str.split(',');
+
+export const getLinksArray = () => Object.entries(NAVIGATION).filter(([key]) => key !== 'home');

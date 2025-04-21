@@ -9,18 +9,18 @@ export default function About() {
             <section className="border-2 rounded-lg xl:relative dark:border-neutral-700">
                 <Image
                     priority
-                    src="https://earnionc.sirv.com/portfolio-felix/me.jpeg"
-                    className="mx-auto rounded-lg xl:relative xl:-left-4 xl:-top-4 xl:mx-0"
-                    alt="Felix Pacheco Avatar"
+                    src="https://earnionc.sirv.com/portfolio-felix/felix-casual.webp"
+                    className="mx-auto rotate-90 rounded-lg xl:relative xl:-left-4 xl:-top-4 xl:mx-0"
+                    alt="Felix Pacheco Casual"
                     draggable="false"
                     width={350}
                     height={800}
                 />
                 <Image
                     priority
-                    src="https://earnionc.sirv.com/portfolio-felix/mountain.jpeg"
+                    src="https://earnionc.sirv.com/portfolio-felix/felix-sport.webp"
                     className="hidden rounded-lg xl:inline-block xl:absolute xl:-bottom-4 xl:-right-4"
-                    alt="Felix Pacheco Avatar"
+                    alt="Felix Pacheco Sport"
                     draggable="false"
                     width={460}
                     height={460}

@@ -2,7 +2,7 @@
 import { ExperienceSummary } from "@/components/ExperienceSummary";
 import { HeadTitle } from "@/components/HeadTitle";
 import { MainSection } from "@/components/layout/MainSection";
-import { getExperiences } from "src/lib/services";
+import { getExperiences } from "@/lib/services";
 
 export default async function Experience() {
     const experiences = await getExperiences();

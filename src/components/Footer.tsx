@@ -1,11 +1,11 @@
 import { NavbarItems } from '@/components/navigation/NavbarItems';
 import clsx from 'clsx';
 
-type TProps = {
+type Props = {
     className?: string
 }
 
-export const Footer = ({ className = ''}: TProps) => {
+export const Footer = ({ className = ''}: Props) => {
     const classNames = clsx({
         'flex flex-col items-center space-y-4 dark:border-neutral-700 border-t-2 py-5 sm:space-y-0 sm:flex-row sm:justify-between': true,
         [className]: !!className

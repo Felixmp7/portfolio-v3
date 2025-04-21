@@ -1,13 +1,13 @@
 'use client';
 
+import { Experience } from "@prisma/client";
 import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
 import { TbExternalLink } from 'react-icons/tb';
 
 import { EnterpriseLogo } from "@/components/EnterpriseLogo";
-import Modal from "@/components/Modal";
-import { Experience } from "@prisma/client";
+import Modal from "@/components/ui/Modal";
 
 export const ExperienceSummary = ({
     enterpriseName, description, urlName, contributions, url, stack, logo
@@ -48,7 +48,7 @@ export const ExperienceSummary = ({
                         {contributions.map((contribution, index) => {
                             return (
                                 // eslint-disable-next-line react/no-array-index-key
-                                <p key={index} className="font-light dark:text-neutral-400 mb-4">
+                                <p key={index} className="mb-4 font-light dark:text-neutral-400">
                                     {contribution}
                                 </p>
                             );
