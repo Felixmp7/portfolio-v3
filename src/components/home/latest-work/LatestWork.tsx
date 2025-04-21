@@ -1,8 +1,8 @@
 import { LatestWorkItem } from '@/components/home/latest-work/LatestWorkItem';
 import { FetchError } from '@/components/ui/FetchError';
+import { getExperiences } from '@/lib/services';
 import { Experience } from '@prisma/client';
 import { MdOutlineWorkOutline } from 'react-icons/md';
-import { getExperiences } from 'src/lib/services';
 import { DownloadCV } from './DownloadCV';
 
 const LATEST_EXPERIENCES_LIMIT = 5;

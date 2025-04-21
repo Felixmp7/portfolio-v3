@@ -1,7 +1,7 @@
 import { HeadTitle } from "@/components/HeadTitle";
 import { Review } from "@/components/Review";
 import { MainSection } from "@/components/layout/MainSection";
-import { getReviews } from "src/lib/services";
+import { getReviews } from "@/lib/services";
 
 export default async function Reviews() {
     const reviews = await getReviews();
