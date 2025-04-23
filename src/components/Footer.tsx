@@ -15,7 +15,7 @@ export const Footer = ({ className = ''}: Props) => {
             <ul className="flex gap-8 py-3">
                 <NavbarItems />
             </ul>
-            <span className='text-xs text-neutral-500 md:text-sm'>Powered by Felix Pacheco | 2023</span>
+            <span className='text-xs text-neutral-400 md:text-sm'>Powered by Felix Pacheco | 2023</span>
         </footer>
     );
 };
