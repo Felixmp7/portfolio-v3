@@ -2,13 +2,13 @@
 
 import { BurgerMenu } from '@/components/navigation/BurgerMenu';
 import { NavbarItems } from '@/components/navigation/NavbarItems';
+import { NAVIGATION } from '@/constants';
 import clsx from 'clsx';
 import { useTheme } from "next-themes";
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { IoMoon, IoSunnyOutline } from 'react-icons/io5';
-import { NAVIGATION } from 'src/constants';
 
 export const Navbar = () => {
     const pathname = usePathname();
