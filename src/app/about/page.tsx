@@ -1,7 +1,7 @@
 import { CTA } from "@/components/CTA";
 import { HeadTitle } from "@/components/HeadTitle";
+import { getAge } from "@/utils";
 import Image from "next/image";
-import { getAge } from "src/utils";
 
 export default function About() {
     return (
