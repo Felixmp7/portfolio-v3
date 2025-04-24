@@ -1,29 +1,30 @@
+import Image from "next/image";
+
 import { CTA } from "@/components/CTA";
 import { HeadTitle } from "@/components/HeadTitle";
 import { getAge } from "@/utils";
-import Image from "next/image";
 
 export default function About() {
     return (
         <div className="grid gap-10 pt-10 xl:pt-24 xl:grid-cols-2">
-            <section className="border-2 rounded-lg xl:relative dark:border-neutral-700">
+            <section className="gap-4 p-4 border-2 rounded-xl xl:relative xl:gap-10 max-xl:grid max-xl:grid-cols-2 max-xl:place-items-center dark:border-neutral-700">
                 <Image
                     priority
-                    src="https://earnionc.sirv.com/portfolio-felix/felix-casual.webp"
-                    className="mx-auto rotate-90 rounded-lg xl:relative xl:-left-4 xl:-top-4 xl:mx-0"
+                    src="https://earnionc.sirv.com/portfolio-felix/felix-casual.webp?w=400&h=534"
+                    className="rounded-xl xl:absolute xl:left-10 xl:-top-6 z-[1]"
                     alt="Felix Pacheco Casual"
                     draggable="false"
-                    width={350}
-                    height={800}
+                    width={400}
+                    height={534}
                 />
                 <Image
                     priority
-                    src="https://earnionc.sirv.com/portfolio-felix/felix-sport.webp"
-                    className="hidden rounded-lg xl:inline-block xl:absolute xl:-bottom-4 xl:-right-4"
+                    src="https://earnionc.sirv.com/portfolio-felix/felix-sport.webp?w=400&h=533"
+                    className="rounded-xl xl:absolute xl:-bottom-6 xl:right-10"
                     alt="Felix Pacheco Sport"
                     draggable="false"
-                    width={460}
-                    height={460}
+                    width={400}
+                    height={533}
                 />
             </section>
             <section>
