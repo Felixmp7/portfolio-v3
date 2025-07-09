@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+import { EmbeddedExample } from '@/components/EmbeddedExample';
 import { LatestWork } from '@/components/home/latest-work/LatestWork';
 import { MainHeader } from '@/components/home/MainHeader';
 import { MainRowImages } from '@/components/home/MainRowImages';
@@ -20,6 +21,7 @@ export default function Home() {
                     <LatestWork />
                 </div>
             </section>
+            <EmbeddedExample />
         </section>
     );
 }
