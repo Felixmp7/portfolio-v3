@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Felix Pacheco | React Developer',
-    description: 'Web Profesional Portfolio',
+    description: 'Web Professional Portfolio',
     icons: [
         {
             rel: 'icon',

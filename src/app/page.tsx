@@ -4,6 +4,7 @@ import { MainHeader } from '@/components/home/MainHeader';
 import { MainRowImages } from '@/components/home/MainRowImages';
 import { MainStack } from '@/components/home/MainStack';
 
+export const dynamic = 'force-dynamic';
 
 export default function Home() {
     return (
